@@ -18,7 +18,8 @@ class TitleTableViewCell: UITableViewCell {
     }
 
     private func setupAccessibility() {
-        titleLabel.accessibilityTraits = .header
+        isAccessibilityElement = true
+        accessibilityTraits = .header
     }
 
     required init?(coder: NSCoder) {
@@ -38,5 +39,6 @@ class TitleTableViewCell: UITableViewCell {
 
     func configure(with title: String) {
         titleLabel.text = title
+        accessibilityLabel = title
     }
 }

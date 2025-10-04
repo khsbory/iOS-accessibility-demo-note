@@ -4,9 +4,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                NavigationLink(destination: CustomScrollDemoView()
-                    .navigationTitle("커스텀 가로 스크롤 데모")
-                    .navigationBarTitleDisplayMode(.inline)) {
+                NavigationLink(destination: DemoTabView()) {
                     Text("커스텀 가로 스크롤 데모")
                         .font(.headline)
                         .padding()

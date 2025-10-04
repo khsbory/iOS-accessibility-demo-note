@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11111111111111111111AAA1 /* CustomScrollDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22222222222222222222BBB1 /* CustomScrollDemoView.swift */; };
 		33333333333333333333CCC1 /* CustomScrollDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */; };
 		55555555555555555555EEE1 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66666666666666666666FFF1 /* FoodItem.swift */; };
 		77777777777777777777GGG1 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88888888888888888888HHH1 /* TitleTableViewCell.swift */; };
 		99999999999999999999III1 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */; };
 		BBBBBBBBBBBBBBBBBBBBKKKK1 /* HorizontalScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */; };
 		DDDDDDDDDDDDDDDDDDDDMMM1 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */; };
+		ACC111111111111111111111 /* AccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC222222222222222222222 /* AccessibleDemoView.swift */; };
+		NAC111111111111111111111 /* NonAccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC222222222222222222222 /* NonAccessibleDemoView.swift */; };
+		NAC333333333333333333333 /* NonAccessibleFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC444444444444444444444 /* NonAccessibleFoodCell.swift */; };
+		NAC555555555555555555555 /* NonAccessibleHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */; };
+		NAC777777777777777777777 /* NonAccessibleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC888888888888888888888 /* NonAccessibleTitleCell.swift */; };
+		NAC999999999999999999999 /* NonAccessibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */; };
+		DEMOTAB1111111111111111 /* DemoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEMOTAB2222222222222222 /* DemoTabView.swift */; };
 		66099B44A818983E0B5AD541 /* VoiceOverDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */; };
 		D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CDF4507AC9B3BCFE98BFB /* ContentView.swift */; };
 		F12592D0B0AB5EC40888C995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A803710E5E5B0160B6748 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22222222222222222222BBB1 /* CustomScrollDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoView.swift; sourceTree = "<group>"; };
 		234CDF4507AC9B3BCFE98BFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		341790690DCB47AA4DDDABC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +34,13 @@
 		AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollTableViewCell.swift; sourceTree = "<group>"; };
 		EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		ACC222222222222222222222 /* AccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleDemoView.swift; sourceTree = "<group>"; };
+		NAC222222222222222222222 /* NonAccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleDemoView.swift; sourceTree = "<group>"; };
+		NAC444444444444444444444 /* NonAccessibleFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleFoodCell.swift; sourceTree = "<group>"; };
+		NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleHorizontalCell.swift; sourceTree = "<group>"; };
+		NAC888888888888888888888 /* NonAccessibleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleTitleCell.swift; sourceTree = "<group>"; };
+		NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleViewController.swift; sourceTree = "<group>"; };
+		DEMOTAB2222222222222222 /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
 		7EAC75328BB49DFDEC917117 /* VoiceOverDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VoiceOverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemoApp.swift; sourceTree = "<group>"; };
 		CA3A803710E5E5B0160B6748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,19 +58,41 @@
 		A28FEFB9BB394727B0AE916A /* VoiceOverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ACCGRP111111111111111111 /* Accessible */,
+				NACGRP111111111111111111 /* NonAccessible */,
 				CA3A803710E5E5B0160B6748 /* Assets.xcassets */,
 				234CDF4507AC9B3BCFE98BFB /* ContentView.swift */,
-				22222222222222222222BBB1 /* CustomScrollDemoView.swift */,
-				44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */,
+				DEMOTAB2222222222222222 /* DemoTabView.swift */,
 				66666666666666666666FFF1 /* FoodItem.swift */,
-				AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */,
-				CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */,
-				88888888888888888888HHH1 /* TitleTableViewCell.swift */,
 				EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */,
 				341790690DCB47AA4DDDABC4 /* Info.plist */,
 				A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */,
 			);
 			path = VoiceOverDemo;
+			sourceTree = "<group>";
+		};
+		ACCGRP111111111111111111 /* Accessible */ = {
+			isa = PBXGroup;
+			children = (
+				ACC222222222222222222222 /* AccessibleDemoView.swift */,
+				44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */,
+				AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */,
+				CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */,
+				88888888888888888888HHH1 /* TitleTableViewCell.swift */,
+			);
+			path = Accessible;
+			sourceTree = "<group>";
+		};
+		NACGRP111111111111111111 /* NonAccessible */ = {
+			isa = PBXGroup;
+			children = (
+				NAC222222222222222222222 /* NonAccessibleDemoView.swift */,
+				NAC444444444444444444444 /* NonAccessibleFoodCell.swift */,
+				NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */,
+				NAC888888888888888888888 /* NonAccessibleTitleCell.swift */,
+				NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */,
+			);
+			path = NonAccessible;
 			sourceTree = "<group>";
 		};
 		E5E1292E40B52AC040EB2517 = {
@@ -140,13 +174,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */,
-				11111111111111111111AAA1 /* CustomScrollDemoView.swift in Sources */,
 				33333333333333333333CCC1 /* CustomScrollDemoViewController.swift in Sources */,
+				DEMOTAB1111111111111111 /* DemoTabView.swift in Sources */,
 				55555555555555555555EEE1 /* FoodItem.swift in Sources */,
 				77777777777777777777GGG1 /* TitleTableViewCell.swift in Sources */,
 				99999999999999999999III1 /* FoodCollectionViewCell.swift in Sources */,
 				BBBBBBBBBBBBBBBBBBBBKKKK1 /* HorizontalScrollTableViewCell.swift in Sources */,
 				DDDDDDDDDDDDDDDDDDDDMMM1 /* ToastView.swift in Sources */,
+				ACC111111111111111111111 /* AccessibleDemoView.swift in Sources */,
+				NAC111111111111111111111 /* NonAccessibleDemoView.swift in Sources */,
+				NAC333333333333333333333 /* NonAccessibleFoodCell.swift in Sources */,
+				NAC555555555555555555555 /* NonAccessibleHorizontalCell.swift in Sources */,
+				NAC777777777777777777777 /* NonAccessibleTitleCell.swift in Sources */,
+				NAC999999999999999999999 /* NonAccessibleViewController.swift in Sources */,
 				66099B44A818983E0B5AD541 /* VoiceOverDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

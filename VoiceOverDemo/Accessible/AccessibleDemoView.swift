@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-struct CustomScrollDemoView: UIViewControllerRepresentable {
+struct AccessibleDemoView: UIViewControllerRepresentable {
 
     func makeUIViewController(context: Context) -> CustomScrollDemoViewController {
         let viewController = CustomScrollDemoViewController()
