@@ -55,6 +55,11 @@ class ToastView: UIView {
             toast.alpha = 1
         }
 
+        // VoiceOver 사용자를 위한 접근성 알림 (0.5초 후)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIAccessibility.post(notification: .announcement, argument: message)
+        }
+
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             UIView.animate(withDuration: 0.3, animations: {
                 toast.alpha = 0
