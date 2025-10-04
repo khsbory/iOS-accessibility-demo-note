@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct DemoTabView: View {
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         TabView {
             NonAccessibleDemoView()
@@ -17,6 +19,22 @@ struct DemoTabView: View {
         }
         .navigationTitle("커스텀 가로 스크롤 데모")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    HStack(spacing: 4) {
+                        Image(systemName: "chevron.left")
+                        Text("뒤로")
+                    }
+                }
+            }
+        }
+        .accessibilityAction(.escape) {
+            dismiss()
+        }
     }
 }
 
