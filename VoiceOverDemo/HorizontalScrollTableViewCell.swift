@@ -79,5 +79,8 @@ extension HorizontalScrollTableViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedItem = items[indexPath.item]
         delegate?.didSelectItem(selectedItem)
+
+        // VoiceOver에서 "선택됨" 상태를 읽지 않도록 즉시 선택 해제
+        collectionView.deselectItem(at: indexPath, animated: false)
     }
 }

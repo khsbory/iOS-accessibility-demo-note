@@ -23,6 +23,12 @@ class FoodCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupAccessibility()
+    }
+
+    private func setupAccessibility() {
+        isAccessibilityElement = true
+        accessibilityTraits = .button
     }
 
     required init?(coder: NSCoder) {
@@ -51,5 +57,6 @@ class FoodCollectionViewCell: UICollectionViewCell {
     func configure(with item: FoodItem) {
         emojiLabel.text = item.emoji
         nameLabel.text = item.name
+        accessibilityLabel = item.name
     }
 }
