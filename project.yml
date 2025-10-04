@@ -1,0 +1,43 @@
+name: VoiceOverDemo
+options:
+  bundleIdPrefix: com.voiceoverdemo
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: ko
+
+targets:
+  VoiceOverDemo:
+    type: application
+    platform: iOS
+    sources:
+      - VoiceOverDemo
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.voiceoverdemo.VoiceOverDemo
+      INFOPLIST_FILE: VoiceOverDemo/Info.plist
+      DEVELOPMENT_TEAM: ""
+    info:
+      path: VoiceOverDemo/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: ko
+        CFBundleDisplayName: 보이스오버 데모
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleInfoDictionaryVersion: "6.0"
+        CFBundleName: $(PRODUCT_NAME)
+        CFBundlePackageType: APPL
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSRequiresIPhoneOS: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIApplicationSupportsIndirectInputEvents: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
