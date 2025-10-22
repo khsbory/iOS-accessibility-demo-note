@@ -1,23 +1,23 @@
 import SwiftUI
 
-struct DemoTabView: View {
+struct RadioButtonTabView: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         TabView {
-            NonAccessibleDemoView()
+            NonAccessibleRadioButtonDemoView()
                 .tabItem {
                     Label(NSLocalizedString("tab.nonAccessible", comment: ""), systemImage: "xmark.circle")
                 }
                 .tag(0)
 
-            AccessibleDemoView()
+            AccessibleRadioButtonDemoView()
                 .tabItem {
                     Label(NSLocalizedString("tab.accessible", comment: ""), systemImage: "checkmark.circle")
                 }
                 .tag(1)
         }
-        .navigationTitle(NSLocalizedString("navigation.title.customHorizontalScroll", comment: ""))
+        .navigationTitle(NSLocalizedString("navigation.title.radioButton", comment: ""))
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -39,5 +39,5 @@ struct DemoTabView: View {
 }
 
 #Preview {
-    DemoTabView()
+    RadioButtonTabView()
 }

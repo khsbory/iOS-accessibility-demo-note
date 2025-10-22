@@ -5,7 +5,7 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 20) {
                 NavigationLink(destination: DemoTabView()) {
-                    Text("커스텀 가로 스크롤 데모")
+                    Text(NSLocalizedString("main.button.customScroll", comment: ""))
                         .font(.headline)
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -15,9 +15,20 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: RadioButtonTabView()) {
+                    Text(NSLocalizedString("main.button.radioButton", comment: ""))
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
-            .navigationTitle("보이스오버 데모")
+            .navigationTitle(NSLocalizedString("main.title", comment: ""))
         }
     }
 }

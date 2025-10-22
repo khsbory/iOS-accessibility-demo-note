@@ -50,6 +50,6 @@ class NonAccessibleFoodCell: UICollectionViewCell {
 
     func configure(with item: FoodItem) {
         emojiLabel.text = item.emoji
-        nameLabel.text = item.name
+        nameLabel.text = NSLocalizedString(item.name, comment: "")
     }
 }

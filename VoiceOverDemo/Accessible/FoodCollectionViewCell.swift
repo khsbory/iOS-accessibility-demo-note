@@ -55,8 +55,9 @@ class FoodCollectionViewCell: UICollectionViewCell {
     }
 
     func configure(with item: FoodItem) {
+        let localizedName = NSLocalizedString(item.name, comment: "")
         emojiLabel.text = item.emoji
-        nameLabel.text = item.name
-        accessibilityLabel = item.name
+        nameLabel.text = localizedName
+        accessibilityLabel = localizedName
     }
 }

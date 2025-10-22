@@ -62,7 +62,7 @@ extension CustomScrollDemoViewController: UITableViewDataSource {
             ) as? TitleTableViewCell else {
                 return UITableViewCell()
             }
-            cell.configure(with: "과일")
+            cell.configure(with: NSLocalizedString("section.title.fruits", comment: ""))
             cell.selectionStyle = .none
             return cell
 
@@ -85,7 +85,7 @@ extension CustomScrollDemoViewController: UITableViewDataSource {
             ) as? TitleTableViewCell else {
                 return UITableViewCell()
             }
-            cell.configure(with: "채소")
+            cell.configure(with: NSLocalizedString("section.title.vegetables", comment: ""))
             cell.selectionStyle = .none
             return cell
 
@@ -114,7 +114,9 @@ extension CustomScrollDemoViewController: UITableViewDelegate {
 // MARK: - HorizontalScrollTableViewCellDelegate
 extension CustomScrollDemoViewController: HorizontalScrollTableViewCellDelegate {
     func didSelectItem(_ item: FoodItem) {
-        let message = "\(item.emoji) \(item.name)을(를) 선택했습니다!"
+        let localizedName = NSLocalizedString(item.name, comment: "")
+        let messageFormat = NSLocalizedString("toast.message.itemSelected", comment: "")
+        let message = String(format: messageFormat, item.emoji, localizedName)
         ToastView.show(message: message, in: self)
     }
 }

@@ -1,0 +1,86 @@
+
+/* Tabs */
+"tab.nonAccessible" = "미적용";
+"tab.accessible" = "적용";
+
+/* Main Screen */
+"main.title" = "보이스오버 데모";
+"main.button.customScroll" = "커스텀 가로 스크롤 데모";
+"main.button.radioButton" = "라디오버튼 테스트";
+
+/* Navigation */
+"navigation.title.customHorizontalScroll" = "커스텀 가로 스크롤 데모";
+"navigation.title.radioButton" = "라디오버튼 테스트";
+"button.back" = "뒤로";
+
+/* Radio Button Demo */
+"demo.radioButton.title" = "라디오버튼 테스트";
+
+/* Radio Button Groups */
+"radioGroup.gender.title" = "성별";
+"radioGroup.fruit.title" = "좋아하는 과일";
+
+/* Radio Button Options */
+"radioButton.male" = "남자";
+"radioButton.female" = "여자";
+"radioButton.apple" = "사과";
+"radioButton.banana" = "바나나";
+"radioButton.orange" = "오렌지";
+"radioButton.grape" = "포도";
+
+/* Radio Button Announcements */
+"radioButton.selected.announcement" = "%@ 선택됨";
+
+/* Accessibility */
+"accessibility.radioGroup" = "라디오 그룹";
+
+/* Sections */
+"section.title.fruits" = "과일";
+"section.title.vegetables" = "채소";
+
+/* Toast Message */
+"toast.message.itemSelected" = "%1$@ %2$@을(를) 선택했습니다!";
+
+/* Fruits */
+"food.apple" = "사과";
+"food.banana" = "바나나";
+"food.orange" = "오렌지";
+"food.grapes" = "포도";
+"food.watermelon" = "수박";
+"food.strawberry" = "딸기";
+"food.cherry" = "체리";
+"food.peach" = "복숭아";
+"food.pineapple" = "파인애플";
+"food.kiwi" = "키위";
+"food.lemon" = "레몬";
+"food.pear" = "배";
+"food.mango" = "망고";
+"food.coconut" = "코코넛";
+"food.blueberry" = "블루베리";
+"food.melon" = "멜론";
+"food.plum" = "자두";
+"food.apricot" = "살구";
+"food.persimmon" = "감";
+"food.lime" = "라임";
+
+/* Vegetables */
+"food.tomato" = "토마토";
+"food.eggplant" = "가지";
+"food.carrot" = "당근";
+"food.corn" = "옥수수";
+"food.chili" = "고추";
+"food.cucumber" = "오이";
+"food.broccoli" = "브로콜리";
+"food.lettuce" = "양상추";
+"food.potato" = "감자";
+"food.sweetPotato" = "고구마";
+"food.onion" = "양파";
+"food.garlic" = "마늘";
+"food.mushroom" = "버섯";
+"food.pumpkin" = "호박";
+"food.bellPepper" = "피망";
+"food.radish" = "무";
+"food.cabbage" = "배추";
+"food.spinach" = "시금치";
+"food.greenOnion" = "파";
+"food.celery" = "셀러리";

@@ -1,0 +1,86 @@
+
+/* Tabs */
+"tab.nonAccessible" = "Not Applied";
+"tab.accessible" = "Applied";
+
+/* Main Screen */
+"main.title" = "VoiceOver Demo";
+"main.button.customScroll" = "Custom Horizontal Scroll Demo";
+"main.button.radioButton" = "Radio Button Test";
+
+/* Navigation */
+"navigation.title.customHorizontalScroll" = "Custom Horizontal Scroll Demo";
+"navigation.title.radioButton" = "Radio Button Test";
+"button.back" = "Back";
+
+/* Radio Button Demo */
+"demo.radioButton.title" = "Radio Button Test";
+
+/* Radio Button Groups */
+"radioGroup.gender.title" = "Gender";
+"radioGroup.fruit.title" = "Favorite Fruit";
+
+/* Radio Button Options */
+"radioButton.male" = "Male";
+"radioButton.female" = "Female";
+"radioButton.apple" = "Apple";
+"radioButton.banana" = "Banana";
+"radioButton.orange" = "Orange";
+"radioButton.grape" = "Grape";
+
+/* Radio Button Announcements */
+"radioButton.selected.announcement" = "%@ selected";
+
+/* Accessibility */
+"accessibility.radioGroup" = "Radio Group";
+
+/* Sections */
+"section.title.fruits" = "Fruits";
+"section.title.vegetables" = "Vegetables";
+
+/* Toast Message */
+"toast.message.itemSelected" = "Selected %2$@ %1$@!";
+
+/* Fruits */
+"food.apple" = "Apple";
+"food.banana" = "Banana";
+"food.orange" = "Orange";
+"food.grapes" = "Grapes";
+"food.watermelon" = "Watermelon";
+"food.strawberry" = "Strawberry";
+"food.cherry" = "Cherry";
+"food.peach" = "Peach";
+"food.pineapple" = "Pineapple";
+"food.kiwi" = "Kiwi";
+"food.lemon" = "Lemon";
+"food.pear" = "Pear";
+"food.mango" = "Mango";
+"food.coconut" = "Coconut";
+"food.blueberry" = "Blueberry";
+"food.melon" = "Melon";
+"food.plum" = "Plum";
+"food.apricot" = "Apricot";
+"food.persimmon" = "Persimmon";
+"food.lime" = "Lime";
+
+/* Vegetables */
+"food.tomato" = "Tomato";
+"food.eggplant" = "Eggplant";
+"food.carrot" = "Carrot";
+"food.corn" = "Corn";
+"food.chili" = "Chili";
+"food.cucumber" = "Cucumber";
+"food.broccoli" = "Broccoli";
+"food.lettuce" = "Lettuce";
+"food.potato" = "Potato";
+"food.sweetPotato" = "Sweet Potato";
+"food.onion" = "Onion";
+"food.garlic" = "Garlic";
+"food.mushroom" = "Mushroom";
+"food.pumpkin" = "Pumpkin";
+"food.bellPepper" = "Bell Pepper";
+"food.radish" = "Radish";
+"food.cabbage" = "Cabbage";
+"food.spinach" = "Spinach";
+"food.greenOnion" = "Green Onion";
+"food.celery" = "Celery";
