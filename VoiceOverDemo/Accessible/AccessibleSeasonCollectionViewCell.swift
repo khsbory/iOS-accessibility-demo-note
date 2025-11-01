@@ -98,6 +98,9 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             itemsStackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8)
         ])
+
+        headerView.isAccessibilityElement = true
+        headerView.accessibilityTraits = .button
     }
 
     private func setupGesture() {
@@ -119,6 +122,14 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
         stackHeightConstraint?.constant = 0
 
         updateChevron()
+
+        isAccessibilityElement = true
+        accessibilityLabel = titleLabel.text
+        accessibilityTraits = .button
+        accessibilityValue = "축소됨"
+
+        headerView.accessibilityLabel = titleLabel.text
+        headerView.accessibilityValue = "축소됨"
     }
 
     // MARK: - Actions
@@ -140,14 +151,22 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             let spacing = itemsStackView.spacing
             let totalHeight = CGFloat(items.count) * itemHeight + CGFloat(items.count - 1) * spacing
             stackHeightConstraint?.constant = totalHeight
+
+            accessibilityElements = [headerView, itemsStackView]
         } else {
             // Remove items
             itemsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
             itemsStackView.isHidden = true
             stackHeightConstraint?.constant = 0
+
+            isAccessibilityElement = true
+            accessibilityElements = nil
         }
 
         updateChevron()
+
+        accessibilityValue = isExpanded ? "확장됨" : "축소됨"
+        headerView.accessibilityValue = isExpanded ? "확장됨" : "축소됨"
 
         // Notify collection view to update layout
         if let collectionView = superview as? UICollectionView {
@@ -188,6 +207,9 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             nameLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -12)
         ])
+
+        container.isAccessibilityElement = true
+        container.accessibilityLabel = nameLabel.text
 
         return container
     }

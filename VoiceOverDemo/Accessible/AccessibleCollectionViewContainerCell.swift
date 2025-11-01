@@ -67,6 +67,12 @@ class AccessibleCollectionViewContainerCell: UITableViewCell {
     // MARK: - Configuration
     func configure(with category: ExpandableItem) {
         self.category = category
+
+        let categoryName = NSLocalizedString(category.title, comment: "")
+        collectionView.accessibilityLabel = "\(categoryName) 계절 목록"
+
+        accessibilityElements = [collectionView]
+
         collectionView.reloadData()
     }
 

@@ -98,6 +98,11 @@ class AccessibleCategoryHeaderView: UITableViewHeaderFooterView {
         titleLabel.text = NSLocalizedString(category.title, comment: "")
 
         updateChevron()
+
+        isAccessibilityElement = true
+        accessibilityLabel = titleLabel.text
+        accessibilityTraits = .button
+        accessibilityValue = isExpanded ? "확장됨" : "축소됨"
     }
 
     // MARK: - Actions
@@ -120,5 +125,7 @@ class AccessibleCategoryHeaderView: UITableViewHeaderFooterView {
             let angle: CGFloat = expanded ? .pi / 2 : 0
             chevronImageView.transform = CGAffineTransform(rotationAngle: angle)
         }
+
+        accessibilityValue = expanded ? "확장됨" : "축소됨"
     }
 }
