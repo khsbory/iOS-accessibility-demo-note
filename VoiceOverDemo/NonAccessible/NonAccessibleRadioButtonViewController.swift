@@ -6,8 +6,8 @@ class NonAccessibleRadioButtonViewController: UIViewController {
     private var selectedGender: String?
     private var selectedFruit: String?
 
-    private var genderButtons: [UIButton] = []
-    private var fruitButtons: [UIButton] = []
+    private var genderButtons: [UIView] = []
+    private var fruitButtons: [UIView] = []
 
     // MARK: - UI Components
     private lazy var scrollView: UIScrollView = {
@@ -138,11 +138,12 @@ class NonAccessibleRadioButtonViewController: UIViewController {
             NSLocalizedString("radioButton.female", comment: "")
         ]
 
-        var previousButton: UIButton?
+        var previousButton: UIView?
 
         for (index, gender) in genders.enumerated() {
             let button = createRadioButton(title: gender, tag: index)
-            button.addTarget(self, action: #selector(genderButtonTapped(_:)), for: .touchUpInside)
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(genderButtonTapped(_:)))
+            button.addGestureRecognizer(tapGesture)
             genderButtons.append(button)
             genderGroupContainer.addSubview(button)
 
@@ -174,11 +175,12 @@ class NonAccessibleRadioButtonViewController: UIViewController {
             NSLocalizedString("radioButton.grape", comment: "")
         ]
 
-        var previousButton: UIButton?
+        var previousButton: UIView?
 
         for (index, fruit) in fruits.enumerated() {
             let button = createRadioButton(title: fruit, tag: index)
-            button.addTarget(self, action: #selector(fruitButtonTapped(_:)), for: .touchUpInside)
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(fruitButtonTapped(_:)))
+            button.addGestureRecognizer(tapGesture)
             fruitButtons.append(button)
             fruitGroupContainer.addSubview(button)
 
@@ -202,19 +204,28 @@ class NonAccessibleRadioButtonViewController: UIViewController {
         }
     }
 
-    private func createRadioButton(title: String, tag: Int) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setTitle(title, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16)
-        button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    private func createRadioButton(title: String, tag: Int) -> UIView {
+        let button = UIView()
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.systemGray4.cgColor
         button.backgroundColor = .systemBackground
-        button.setTitleColor(.label, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tag = tag
+
+        // 타이틀 레이블 추가
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.font = .systemFont(ofSize: 16)
+        titleLabel.textColor = .label
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        button.addSubview(titleLabel)
+
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: -16),
+            titleLabel.centerYAnchor.constraint(equalTo: button.centerYAnchor)
+        ])
 
         // 접근성 미적용
 
@@ -222,7 +233,10 @@ class NonAccessibleRadioButtonViewController: UIViewController {
     }
 
     // MARK: - Actions
-    @objc private func genderButtonTapped(_ sender: UIButton) {
+    @objc private func genderButtonTapped(_ sender: UITapGestureRecognizer) {
+        guard let tappedButton = sender.view else { return }
+        let titleLabel = tappedButton.subviews.first(where: { $0 is UILabel }) as? UILabel
+
         // 모든 성별 버튼의 선택 상태 해제
         for button in genderButtons {
             updateButtonAppearance(button, isSelected: false)
@@ -230,15 +244,18 @@ class NonAccessibleRadioButtonViewController: UIViewController {
         }
 
         // 선택된 버튼의 상태 업데이트
-        updateButtonAppearance(sender, isSelected: true)
+        updateButtonAppearance(tappedButton, isSelected: true)
         // 접근성 미적용 - selected trait 추가 안함
 
-        selectedGender = sender.titleLabel?.text
+        selectedGender = titleLabel?.text
 
         // 접근성 미적용 - VoiceOver 알림 안함
     }
 
-    @objc private func fruitButtonTapped(_ sender: UIButton) {
+    @objc private func fruitButtonTapped(_ sender: UITapGestureRecognizer) {
+        guard let tappedButton = sender.view else { return }
+        let titleLabel = tappedButton.subviews.first(where: { $0 is UILabel }) as? UILabel
+
         // 모든 과일 버튼의 선택 상태 해제
         for button in fruitButtons {
             updateButtonAppearance(button, isSelected: false)
@@ -246,22 +263,25 @@ class NonAccessibleRadioButtonViewController: UIViewController {
         }
 
         // 선택된 버튼의 상태 업데이트
-        updateButtonAppearance(sender, isSelected: true)
+        updateButtonAppearance(tappedButton, isSelected: true)
         // 접근성 미적용 - selected trait 추가 안함
 
-        selectedFruit = sender.titleLabel?.text
+        selectedFruit = titleLabel?.text
 
         // 접근성 미적용 - VoiceOver 알림 안함
     }
 
-    private func updateButtonAppearance(_ button: UIButton, isSelected: Bool) {
+    private func updateButtonAppearance(_ button: UIView, isSelected: Bool) {
+        // 내부 레이블 찾기
+        let titleLabel = button.subviews.first(where: { $0 is UILabel }) as? UILabel
+
         if isSelected {
             button.backgroundColor = .systemBlue
-            button.setTitleColor(.white, for: .normal)
+            titleLabel?.textColor = .white
             button.layer.borderColor = UIColor.systemBlue.cgColor
         } else {
             button.backgroundColor = .systemBackground
-            button.setTitleColor(.label, for: .normal)
+            titleLabel?.textColor = .label
             button.layer.borderColor = UIColor.systemGray4.cgColor
         }
     }

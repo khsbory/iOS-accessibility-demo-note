@@ -35,6 +35,8 @@
 
 /* Accessibility */
 "accessibility.radioGroup" = "라디오 그룹";
+"expanded" = "확장됨";
+"collapsed" = "축소됨";
 
 /* Sections */
 "section.title.fruits" = "과일";

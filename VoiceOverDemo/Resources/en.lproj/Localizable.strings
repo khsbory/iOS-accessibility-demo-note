@@ -35,6 +35,8 @@
 
 /* Accessibility */
 "accessibility.radioGroup" = "Radio Group";
+"expanded" = "Expanded";
+"collapsed" = "Collapsed";
 
 /* Sections */
 "section.title.fruits" = "Fruits";
