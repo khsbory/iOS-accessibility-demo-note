@@ -7,10 +7,12 @@
 "main.title" = "보이스오버 데모";
 "main.button.customScroll" = "커스텀 가로 스크롤 데모";
 "main.button.radioButton" = "라디오버튼 테스트";
+"main.button.expandable" = "확장/축소 데모";
 
 /* Navigation */
 "navigation.title.customHorizontalScroll" = "커스텀 가로 스크롤 데모";
 "navigation.title.radioButton" = "라디오버튼 테스트";
+"navigation.title.expandable" = "확장/축소 데모";
 "button.back" = "뒤로";
 
 /* Radio Button Demo */
@@ -37,6 +39,22 @@
 /* Sections */
 "section.title.fruits" = "과일";
 "section.title.vegetables" = "채소";
+
+/* Categories */
+"category.fruits" = "과일";
+"category.vegetables" = "채소";
+
+/* Seasons - Fruits */
+"season.spring.fruits" = "봄 과일";
+"season.summer.fruits" = "여름 과일";
+"season.fall.fruits" = "가을 과일";
+"season.winter.fruits" = "겨울 과일";
+
+/* Seasons - Vegetables */
+"season.spring.vegetables" = "봄 채소";
+"season.summer.vegetables" = "여름 채소";
+"season.fall.vegetables" = "가을 채소";
+"season.winter.vegetables" = "겨울 채소";
 
 /* Toast Message */
 "toast.message.itemSelected" = "%1$@ %2$@을(를) 선택했습니다!";

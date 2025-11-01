@@ -26,6 +26,17 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: ExpandableTabView()) {
+                    Text(NSLocalizedString("main.button.expandable", comment: ""))
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))

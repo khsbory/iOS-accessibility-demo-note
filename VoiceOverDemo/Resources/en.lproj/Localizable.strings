@@ -7,10 +7,12 @@
 "main.title" = "VoiceOver Demo";
 "main.button.customScroll" = "Custom Horizontal Scroll Demo";
 "main.button.radioButton" = "Radio Button Test";
+"main.button.expandable" = "Expandable Demo";
 
 /* Navigation */
 "navigation.title.customHorizontalScroll" = "Custom Horizontal Scroll Demo";
 "navigation.title.radioButton" = "Radio Button Test";
+"navigation.title.expandable" = "Expandable Demo";
 "button.back" = "Back";
 
 /* Radio Button Demo */
@@ -37,6 +39,22 @@
 /* Sections */
 "section.title.fruits" = "Fruits";
 "section.title.vegetables" = "Vegetables";
+
+/* Categories */
+"category.fruits" = "Fruits";
+"category.vegetables" = "Vegetables";
+
+/* Seasons - Fruits */
+"season.spring.fruits" = "Spring Fruits";
+"season.summer.fruits" = "Summer Fruits";
+"season.fall.fruits" = "Fall Fruits";
+"season.winter.fruits" = "Winter Fruits";
+
+/* Seasons - Vegetables */
+"season.spring.vegetables" = "Spring Vegetables";
+"season.summer.vegetables" = "Summer Vegetables";
+"season.fall.vegetables" = "Fall Vegetables";
+"season.winter.vegetables" = "Winter Vegetables";
 
 /* Toast Message */
 "toast.message.itemSelected" = "Selected %2$@ %1$@!";
