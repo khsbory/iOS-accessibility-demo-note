@@ -15,6 +15,7 @@ class AccessibleExpandableViewController: UIViewController {
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 100
         table.register(AccessibleCategoryTableViewCell.self, forCellReuseIdentifier: AccessibleCategoryTableViewCell.identifier)
+        table.accessibilityLabel = "과일 채소 목록"
         return table
     }()
 

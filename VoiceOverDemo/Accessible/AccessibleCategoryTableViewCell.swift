@@ -145,6 +145,10 @@ class AccessibleCategoryTableViewCell: UITableViewCell {
         emojiLabel.text = category.emoji
         titleLabel.text = NSLocalizedString(category.title, comment: "")
 
+        // 콜렉션뷰 접근성 레이블 설정
+        let categoryName = NSLocalizedString(category.title, comment: "")
+        collectionView.accessibilityLabel = "\(categoryName) 계절 목록"
+
         collectionView.isHidden = true
         collectionViewHeightConstraint?.constant = 0
         updateChevron()

@@ -17,6 +17,7 @@ struct ExpandableTabView: View {
                 }
                 .tag(1)
         }
+        .accessibilityLabel("탭 영역")
         .navigationTitle(NSLocalizedString("navigation.title.expandable", comment: ""))
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)

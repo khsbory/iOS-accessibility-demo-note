@@ -143,6 +143,11 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             let spacing = itemsStackView.spacing
             let totalHeight = CGFloat(items.count) * itemHeight + CGFloat(items.count - 1) * spacing
             stackHeightConstraint?.constant = totalHeight
+
+            // 스택뷰 접근성 설정
+            itemsStackView.accessibilityContainerType = .semanticGroup
+            let seasonName = NSLocalizedString(season.title, comment: "")
+            itemsStackView.accessibilityLabel = "\(seasonName) 목록"
         } else {
             // Remove items
             itemsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
