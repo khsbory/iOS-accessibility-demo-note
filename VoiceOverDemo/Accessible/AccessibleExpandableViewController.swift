@@ -14,7 +14,7 @@ class AccessibleExpandableViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 100
-        table.register(CategoryTableViewCell.self, forCellReuseIdentifier: CategoryTableViewCell.identifier)
+        table.register(AccessibleCategoryTableViewCell.self, forCellReuseIdentifier: AccessibleCategoryTableViewCell.identifier)
         return table
     }()
 
@@ -53,9 +53,9 @@ extension AccessibleExpandableViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: CategoryTableViewCell.identifier,
+            withIdentifier: AccessibleCategoryTableViewCell.identifier,
             for: indexPath
-        ) as? CategoryTableViewCell else {
+        ) as? AccessibleCategoryTableViewCell else {
             return UITableViewCell()
         }
 
@@ -77,9 +77,9 @@ extension AccessibleExpandableViewController: UITableViewDelegate {
     }
 }
 
-// MARK: - CategoryTableViewCellDelegate
-extension AccessibleExpandableViewController: CategoryTableViewCellDelegate {
-    func categoryCell(_ cell: CategoryTableViewCell, didUpdateHeight height: CGFloat) {
+// MARK: - AccessibleCategoryTableViewCellDelegate
+extension AccessibleExpandableViewController: AccessibleCategoryTableViewCellDelegate {
+    func categoryCell(_ cell: AccessibleCategoryTableViewCell, didUpdateHeight height: CGFloat) {
         tableView.beginUpdates()
         tableView.endUpdates()
     }

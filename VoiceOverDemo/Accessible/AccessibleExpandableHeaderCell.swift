@@ -15,6 +15,8 @@ class AccessibleExpandableHeaderCell: UITableViewCell {
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isAccessibilityElement = true
+        view.accessibilityTraits = .button
         return view
     }()
 
@@ -136,12 +138,28 @@ class AccessibleExpandableHeaderCell: UITableViewCell {
 
         // 높이 설정
         contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: item.level == 0 ? 56 : 48).isActive = true
+
+        // 접근성 설정
+        updateAccessibility(item: item)
     }
 
     private func updateChevronRotation(isExpanded: Bool) {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut) {
             let angle: CGFloat = isExpanded ? .pi / 2 : 0
             self.chevronImageView.transform = CGAffineTransform(rotationAngle: angle)
+        }
+    }
+
+    private func updateAccessibility(item: ExpandableItem) {
+        // 접근성 레이블: 이모지 + 제목
+        let label = "\(item.emoji) \(NSLocalizedString(item.title, comment: ""))"
+        containerView.accessibilityLabel = label
+
+        // 접근성 밸류: 확장/축소 상태
+        if item.isExpanded {
+            containerView.accessibilityValue = NSLocalizedString("expanded", comment: "확장됨")
+        } else {
+            containerView.accessibilityValue = NSLocalizedString("collapsed", comment: "축소됨")
         }
     }
 
