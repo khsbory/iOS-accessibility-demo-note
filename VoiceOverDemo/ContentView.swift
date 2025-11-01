@@ -37,6 +37,17 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: WebViewDemoView()) {
+                    Text(NSLocalizedString("main.button.webView", comment: ""))
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))

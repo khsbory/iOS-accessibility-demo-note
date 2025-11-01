@@ -8,11 +8,13 @@
 "main.button.customScroll" = "커스텀 가로 스크롤 데모";
 "main.button.radioButton" = "라디오버튼 테스트";
 "main.button.expandable" = "확장/축소 데모";
+"main.button.webView" = "지마켓 웹 테스트";
 
 /* Navigation */
 "navigation.title.customHorizontalScroll" = "커스텀 가로 스크롤 데모";
 "navigation.title.radioButton" = "라디오버튼 테스트";
 "navigation.title.expandable" = "확장/축소 데모";
+"navigation.title.webView" = "지마켓 웹 테스트";
 "button.back" = "뒤로";
 
 /* Radio Button Demo */

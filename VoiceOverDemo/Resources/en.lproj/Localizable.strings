@@ -8,11 +8,13 @@
 "main.button.customScroll" = "Custom Horizontal Scroll Demo";
 "main.button.radioButton" = "Radio Button Test";
 "main.button.expandable" = "Expandable Demo";
+"main.button.webView" = "Gmarket Web Test";
 
 /* Navigation */
 "navigation.title.customHorizontalScroll" = "Custom Horizontal Scroll Demo";
 "navigation.title.radioButton" = "Radio Button Test";
 "navigation.title.expandable" = "Expandable Demo";
+"navigation.title.webView" = "Gmarket Web Test";
 "button.back" = "Back";
 
 /* Radio Button Demo */
