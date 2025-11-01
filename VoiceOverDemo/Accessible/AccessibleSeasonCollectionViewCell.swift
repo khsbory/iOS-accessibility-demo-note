@@ -14,8 +14,6 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor.systemGray6
         view.layer.cornerRadius = 8
-        view.isAccessibilityElement = true
-        view.accessibilityTraits = .button
         return view
     }()
 
@@ -121,7 +119,6 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
         stackHeightConstraint?.constant = 0
 
         updateChevron()
-        updateAccessibility()
     }
 
     // MARK: - Actions
@@ -143,11 +140,6 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             let spacing = itemsStackView.spacing
             let totalHeight = CGFloat(items.count) * itemHeight + CGFloat(items.count - 1) * spacing
             stackHeightConstraint?.constant = totalHeight
-
-            // 스택뷰 접근성 설정
-            itemsStackView.accessibilityContainerType = .semanticGroup
-            let seasonName = NSLocalizedString(season.title, comment: "")
-            itemsStackView.accessibilityLabel = "\(seasonName) 목록"
         } else {
             // Remove items
             itemsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
@@ -156,7 +148,6 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
         }
 
         updateChevron()
-        updateAccessibility()
 
         // Notify collection view to update layout
         if let collectionView = superview as? UICollectionView {
@@ -206,19 +197,6 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             self.chevronImageView.transform = self.isExpanded ?
                 CGAffineTransform(rotationAngle: .pi) :
                 CGAffineTransform.identity
-        }
-    }
-
-    private func updateAccessibility() {
-        // 접근성 레이블: 이모지 + 제목
-        let label = "\(season?.emoji ?? "") \(NSLocalizedString(season?.title ?? "", comment: ""))"
-        headerView.accessibilityLabel = label
-
-        // 접근성 밸류: 확장/축소 상태
-        if isExpanded {
-            headerView.accessibilityValue = NSLocalizedString("expanded", comment: "확장됨")
-        } else {
-            headerView.accessibilityValue = NSLocalizedString("collapsed", comment: "축소됨")
         }
     }
 

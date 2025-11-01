@@ -176,9 +176,6 @@ class AccessibleCategoryTableViewCell: UITableViewCell {
 
             // Calculate initial height
             calculateCollectionViewHeight()
-
-            // 접근성 엘리먼트를 헤더뷰와 콜렉션뷰로 변경
-            accessibilityElements = [headerView, collectionView]
         } else {
             // Hide collection view
             UIView.animate(withDuration: 0.3) {
@@ -187,8 +184,6 @@ class AccessibleCategoryTableViewCell: UITableViewCell {
             } completion: { _ in
                 self.collectionView.isHidden = true
             }
-
-            accessibilityElements = nil
         }
 
         updateChevron()
