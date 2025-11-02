@@ -3,233 +3,197 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F464A91A21544F25AA385F8 /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513487CB269DBA97D4E0E77 /* SeasonCollectionViewCell.swift */; };
-		118A585E0204B9A48FEEEEC4 /* ExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AFC5FD588B8F48018DC300 /* ExpandableItemCell.swift */; };
-		182422204D398689BC2A8414 /* AccessibleExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0425E6F5A19DCA8307FFA1 /* AccessibleExpandableItemCell.swift */; };
-		19D9B0DE6A88EDFDE1372BFC /* NonAccessibleContainerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D779F1B6C69450B85A7B11 /* NonAccessibleContainerTestViewController.swift */; };
-		1F3358C580A44B6CFA25F4D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B603C7B486A6D4AB7F1367AD /* Foundation.framework */; };
-		33333333333333333333CCC1 /* CustomScrollDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */; };
-		3B2E02559178144D0A71416B /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFF2165D712F513AAE3EFF2 /* CategoryHeaderView.swift */; };
-		3BC5860A0B2B9369EFBE8027 /* AccessibleExpandableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9F7535D583AA40E39ECE61 /* AccessibleExpandableHeaderCell.swift */; };
-		40CAAE475A9DFCC2895C6DF9 /* NonAccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E90CD4382A98487A11929 /* NonAccessibleContainerTestDemoView.swift */; };
-		4295732BD476074C0E7F0985 /* AccessibleCollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A51EE8E6CD73574FE0E236 /* AccessibleCollectionViewContainerCell.swift */; };
-		43F65148887052B4423182BA /* CollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78994EBD19F131D6F5F2239 /* CollectionViewContainerCell.swift */; };
-		55555555555555555555EEE1 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66666666666666666666FFF1 /* FoodItem.swift */; };
-		565D7ABC6F7BBB566197F67A /* ExpandableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BAE44ADFC0BB0EBC28336 /* ExpandableTabView.swift */; };
-		5FBE202D32EEB8284C7290AB /* ExpandableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E45C0ED54DAF6D7E3717B /* ExpandableHeaderCell.swift */; };
-		62CA68588F5F95E47275A3AA /* VoiceOverDemoUITests_CoordinateBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB44B109C9F249C847D8303 /* VoiceOverDemoUITests_CoordinateBased.swift */; };
+		012B44AD28FF416996E43296 /* HorizontalScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */; };
+		08DA6E58D92F3E1A750C6DD6 /* NonAccessibleRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471F021B6E97FA0E21B0009 /* NonAccessibleRadioButtonViewController.swift */; };
+		0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1CDFDC333107C521706FA /* NonAccessibleTitleCell.swift */; };
+		1F1166E9BC386A8AAA1C546C /* NonAccessibleSwiftUIContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10958F3EE1D1563AB9AD88 /* NonAccessibleSwiftUIContainerDemoView.swift */; };
+		1FC38CAC7AEA14A327F06BBF /* ContainerTestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8EF18F5E62E96B4ADBD64 /* ContainerTestDataModel.swift */; };
+		2175A4D6CBCE4B5C7DEF2DAA /* NonAccessibleContainerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2BEE79F08CFA847056041C /* NonAccessibleContainerTestViewController.swift */; };
+		26A37D1A824D6B9E861D286C /* CustomScrollDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC046A6AD943927E99FDF1 /* CustomScrollDemoViewController.swift */; };
+		2A716C3D9F1E63AD7EE7CE8D /* NonAccessibleFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEBC9AF2AB9214AAF1A1B0D /* NonAccessibleFoodCell.swift */; };
+		33F812453E4A115C2D8C64C6 /* RadioButtonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D4843630872C3DBAEFCCD3 /* RadioButtonTabView.swift */; };
+		37652A0ECE257242BD4E4BE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FDB51E7BF3BD4526C7BEF74 /* InfoPlist.strings */; };
+		38370B0A07225E64D4D896F4 /* AccessibleExpandableDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B8600F1AEC5150AE6FB6A3 /* AccessibleExpandableDemoView.swift */; };
+		3D9B873F56D3AA59F1759CB6 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBFC7E5CD5215244CD54585 /* CategoryTableViewCell.swift */; };
+		414FB86D47FA1BD32E0EC078 /* AccessibleExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B942A91892F110917186 /* AccessibleExpandableItemCell.swift */; };
+		43E8B3DCF857BE09EA7BC884 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15049E3BE714F01B8BA51995 /* ToastView.swift */; };
+		544A5E46174298EC6B747E92 /* AccessibleSeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED434C00566D60543D7E03 /* AccessibleSeasonCollectionViewCell.swift */; };
+		5F1D04D97C77B0C2E98CCB2A /* AccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */; };
+		6129AB56E526024BE9E9DCC5 /* NonAccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */; };
+		61AD7A7A1D7371C8161D603F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 790FBACAE286B0A51B787C61 /* Localizable.strings */; };
 		66099B44A818983E0B5AD541 /* VoiceOverDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */; };
-		6C484ACC94771BB8DF1FA0B3 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE4D9F813E2E367CFBA238 /* CategoryTableViewCell.swift */; };
-		77777777777777777777GGG1 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88888888888888888888HHH1 /* TitleTableViewCell.swift */; };
-		85EF63166807D525EDF626FD /* VoiceOverDemoUITests_FruitSpringFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C74F99B60E6F8A93F5CE3 /* VoiceOverDemoUITests_FruitSpringFlow.swift */; };
-		86D2EB6273404E93985B622C /* ContainerTestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446BB77010264616B7628F9 /* ContainerTestDataModel.swift */; };
-		8D154EF733D9AFD53F256C51 /* VoiceOverDemoUITests_Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65780547A3E4125B1E94DC17 /* VoiceOverDemoUITests_Debug.swift */; };
-		8EE24275956BCCA8BAB08EFD /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AE4D9F813E2E367CFBA238 /* CategoryTableViewCell.swift */; };
-		8FD0B77214B5EBA634FB0626 /* AccessibleExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFCDD2DCD5C67D0715657D6 /* AccessibleExpandableViewController.swift */; };
-		900E3044059BDF4AAC3C5AE0 /* NonAccessibleExpandableDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B89E9AA88E2228FD0F937F /* NonAccessibleExpandableDemoView.swift */; };
-		99999999999999999999III1 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */; };
-		ACATCELL1111111111111111 /* AccessibleCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACATCELL2222222222222222 /* AccessibleCategoryTableViewCell.swift */; };
-		ACC111111111111111111111 /* AccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC222222222222222222222 /* AccessibleDemoView.swift */; };
-		ACSEASONCELL111111111111 /* AccessibleSeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACSEASONCELL222222222222 /* AccessibleSeasonCollectionViewCell.swift */; };
-		ARBDEMO1111111111111111 /* AccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ARBDEMO2222222222222222 /* AccessibleRadioButtonDemoView.swift */; };
-		B0FF40DF8AF2AF960FA83832 /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6513487CB269DBA97D4E0E77 /* SeasonCollectionViewCell.swift */; };
-		B32A1678D3E36A48A5024364 /* AccessibleContainerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D25E752484AB392C75E350 /* AccessibleContainerTestViewController.swift */; };
-		BBBBBBBBBBBBBBBBBBBBKKKK1 /* HorizontalScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */; };
-		BD6EB5EEEF576CB7DBDB5DE4 /* ContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F990CC3AC9FA72D8780D4FA /* ContainerTestTabView.swift */; };
-		C63765E1A7522B45339152AA /* AccessibleCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB204650C2DABAACA92208DF /* AccessibleCategoryHeaderView.swift */; };
-		C6429230A8C9FDFF81423105 /* AccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1EFE40854630285C89275A /* AccessibleContainerTestDemoView.swift */; };
-		CFFB2F121FD52D850B4F98B4 /* NonAccessibleExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECCABE8EC3A07B117216459 /* NonAccessibleExpandableViewController.swift */; };
-		D4493931103438B760B660D7 /* VoiceOverDemoUITests_Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4729D822B60FA6F1261AE20A /* VoiceOverDemoUITests_Complete.swift */; };
+		66B322C2959FE73F6E3AABEE /* NonAccessibleExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8832C20166D52CD1C3FA16F /* NonAccessibleExpandableViewController.swift */; };
+		77966C57DEBCD8958DA1AAA5 /* RadioButtonDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD68E1D4CCDCB6F01640AFF /* RadioButtonDemoViewController.swift */; };
+		78728711C8147C9CA3CFF26C /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2756E0BF89768F82F9B810B /* SeasonCollectionViewCell.swift */; };
+		7BE8068F83BC208806215B8B /* NonAccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A56BDD085678191F98A0F77 /* NonAccessibleDemoView.swift */; };
+		7E78EE91F94029E20A92CD1B /* AccessibleExpandableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544B8CA6DE4F05B9D9136EED /* AccessibleExpandableViewController.swift */; };
+		82453852E2449CB0228D6B75 /* NonAccessibleHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421879DC443AAB32B7EF2CC5 /* NonAccessibleHorizontalCell.swift */; };
+		8488E6F334724456F91CA25C /* NonAccessibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A837DA8084F73997C9195 /* NonAccessibleViewController.swift */; };
+		8736F563C9EDA54FD3BCB590 /* NonAccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92835386EF7912B68522539E /* NonAccessibleRadioButtonDemoView.swift */; };
+		94A6665CD7732717DC5560B9 /* SwiftUIContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2742D1E974214D53F5B4C81 /* SwiftUIContainerTestTabView.swift */; };
+		A3FAAD9F207314F0DBBF83C9 /* CollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */; };
+		A8A6CCBB425F4BF22FAD5D4C /* AccessibleContainerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */; };
+		AC84E95789ED02A7FE6EDA1E /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8286B99CA942C83B96CC3D /* CategoryHeaderView.swift */; };
+		ACA93ADD4CBA8C2A008DFC98 /* DemoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8A0379B7E678FD71653BF /* DemoTabView.swift */; };
+		AEC0EF13F6A26B5D02672574 /* AccessibleCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86F9E375B155B8A1CCD4088 /* AccessibleCategoryTableViewCell.swift */; };
+		B3A0EA2EE2291D57E13073EE /* WebViewDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86229D2EEB5C359D7D09AF77 /* WebViewDemoView.swift */; };
+		BA8943F550A6C1CC1EDEA842 /* AccessibleExpandableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236208D8D7AFCB2664A15D7D /* AccessibleExpandableHeaderCell.swift */; };
+		BB35DFD9AA70D746C73E9852 /* AccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */; };
+		BBBF95BBB4C9E7DE12471835 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F74F05D23C4293178BADC2 /* TitleTableViewCell.swift */; };
+		CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0289D33F107F71F95DC80 /* ExpandableItemCell.swift */; };
 		D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CDF4507AC9B3BCFE98BFB /* ContentView.swift */; };
-		DDDDDDDDDDDDDDDDDDDDMMM1 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */; };
-		DEMOTAB1111111111111111 /* DemoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEMOTAB2222222222222222 /* DemoTabView.swift */; };
-		E4ADC035674DEAC283B4736F /* VoiceOverDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F7BE70D938E42BCDA20272 /* VoiceOverDemoUITests.swift */; };
-		ED82E82C3D7089ECF27AE624 /* AccessibleExpandableDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2D389C7168C960646E65B1 /* AccessibleExpandableDemoView.swift */; };
+		DB78668E4DE5047C1A70E524 /* ContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222985CBF8090B41EABE5554 /* ContainerTestTabView.swift */; };
+		DC1CB7F5EF854A3E9E41C36C /* AccessibleCategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F217C2B92DEEA9E26144F9 /* AccessibleCategoryHeaderView.swift */; };
+		DC309CE43F93A31A41A66431 /* AccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51C4221BB45DFF13797AFD /* AccessibleDemoView.swift */; };
+		DD10319C8E9CD25B0557CD8F /* ExpandableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFD699F6A94E01F12A07925 /* ExpandableHeaderCell.swift */; };
+		EDC41EA160BAA04526346585 /* NonAccessibleExpandableDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F214C0FB2FFCBF1A33CE7130 /* NonAccessibleExpandableDemoView.swift */; };
+		F0DB0E20A3638DB824889990 /* AccessibleCollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF05D3FEEE77B92503CFBD9 /* AccessibleCollectionViewContainerCell.swift */; };
 		F12592D0B0AB5EC40888C995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3A803710E5E5B0160B6748 /* Assets.xcassets */; };
-		FE40C1627936C51CC5EE4106 /* ExpandableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77FDDB1030BEC91A719E57D /* ExpandableDataModel.swift */; };
-		INF1111111111111111111111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = INF2222222222222222222222 /* InfoPlist.strings */; };
-		LOC1111111111111111111111 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = LOC2222222222222222222222 /* Localizable.strings */; };
-		NAC111111111111111111111 /* NonAccessibleDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC222222222222222222222 /* NonAccessibleDemoView.swift */; };
-		NAC333333333333333333333 /* NonAccessibleFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC444444444444444444444 /* NonAccessibleFoodCell.swift */; };
-		NAC555555555555555555555 /* NonAccessibleHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */; };
-		NAC777777777777777777777 /* NonAccessibleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = NAC888888888888888888888 /* NonAccessibleTitleCell.swift */; };
-		NAC999999999999999999999 /* NonAccessibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */; };
-		NARBDEMO111111111111111 /* NonAccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = NARBDEMO222222222222222 /* NonAccessibleRadioButtonDemoView.swift */; };
-		NRBDEMO1111111111111111 /* NonAccessibleRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = NRBDEMO2222222222222222 /* NonAccessibleRadioButtonViewController.swift */; };
-		RBDEMO111111111111111111 /* RadioButtonDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = RBDEMO222222222222222222 /* RadioButtonDemoViewController.swift */; };
-		RBTAB11111111111111111 /* RadioButtonTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = RBTAB22222222222222222 /* RadioButtonTabView.swift */; };
-		WEBVIEW1111111111111111 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = WEBVIEW2222222222222222 /* WebView.swift */; };
-		WEBVIEWDEMO11111111111 /* WebViewDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = WEBVIEWDEMO22222222222 /* WebViewDemoView.swift */; };
+		F171D1E57CB2D08B35DEC049 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D02B3D3C9954BC10B943D /* FoodCollectionViewCell.swift */; };
+		F21B72FBDFCC6E0D01B8D7F1 /* AccessibleSwiftUIContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D037EA748DB85E7D77240B /* AccessibleSwiftUIContainerDemoView.swift */; };
+		F90299DAB7394819FBA4718B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87ED18350BF8127C9802202 /* WebView.swift */; };
+		FA4379CBF5DEC1E5CD65B0D4 /* ExpandableDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBD474B8A0CF2E6262AF9C4 /* ExpandableDataModel.swift */; };
+		FCC00EA72AD431C4A47DDEB9 /* ExpandableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836533DE5DEE7C6B0711198 /* ExpandableTabView.swift */; };
+		FDAD547CEF829DF2A7BD6C61 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */; };
+		148FBB79E59645479D3ADE83 /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2050813D74B1786C56A10 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */; };
+		EA54EE6D6BE84B08A5D5A1EB /* AccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86880F594B5447A391EC395E /* AccessibleSwiftUITableViewContainerDemoView.swift */; };
+		9E82D63D0D27432C8AA3218A /* SwiftUITableViewContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8825649C42C1EEE0884ADF6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 59C242063125F360AF84B2FB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 06745594AC0636354E01F25C;
-			remoteInfo = VoiceOverDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		07D25E752484AB392C75E350 /* AccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibleContainerTestViewController.swift; path = VoiceOverDemo/Accessible/AccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
-		0EE93FBB88A92062F1387290 /* VoiceOverDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceOverDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F0425E6F5A19DCA8307FFA1 /* AccessibleExpandableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleExpandableItemCell.swift; sourceTree = SOURCE_ROOT; };
-		134E90CD4382A98487A11929 /* NonAccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NonAccessibleContainerTestDemoView.swift; path = VoiceOverDemo/NonAccessible/NonAccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
-		224C74F99B60E6F8A93F5CE3 /* VoiceOverDemoUITests_FruitSpringFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverDemoUITests_FruitSpringFlow.swift; path = VoiceOverDemoUITests/VoiceOverDemoUITests_FruitSpringFlow.swift; sourceTree = "<group>"; };
+		089A837DA8084F73997C9195 /* NonAccessibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleViewController.swift; sourceTree = "<group>"; };
+		15049E3BE714F01B8BA51995 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		1B2D02B3D3C9954BC10B943D /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		222985CBF8090B41EABE5554 /* ContainerTestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTestTabView.swift; sourceTree = "<group>"; };
 		234CDF4507AC9B3BCFE98BFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2D9F7535D583AA40E39ECE61 /* AccessibleExpandableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleExpandableHeaderCell.swift; sourceTree = SOURCE_ROOT; };
-		30AFC5FD588B8F48018DC300 /* ExpandableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/NonAccessible/ExpandableItemCell.swift; sourceTree = SOURCE_ROOT; };
+		236208D8D7AFCB2664A15D7D /* AccessibleExpandableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleExpandableHeaderCell.swift; sourceTree = "<group>"; };
+		25F0289D33F107F71F95DC80 /* ExpandableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableItemCell.swift; sourceTree = "<group>"; };
+		2836533DE5DEE7C6B0711198 /* ExpandableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTabView.swift; sourceTree = "<group>"; };
+		2DB1CDFDC333107C521706FA /* NonAccessibleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleTitleCell.swift; sourceTree = "<group>"; };
 		341790690DCB47AA4DDDABC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoViewController.swift; sourceTree = "<group>"; };
-		4729D822B60FA6F1261AE20A /* VoiceOverDemoUITests_Complete.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverDemoUITests_Complete.swift; path = VoiceOverDemoUITests/VoiceOverDemoUITests_Complete.swift; sourceTree = "<group>"; };
-		4E2D389C7168C960646E65B1 /* AccessibleExpandableDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleExpandableDemoView.swift; sourceTree = SOURCE_ROOT; };
-		6513487CB269DBA97D4E0E77 /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SeasonCollectionViewCell.swift; path = VoiceOverDemo/NonAccessible/SeasonCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		65780547A3E4125B1E94DC17 /* VoiceOverDemoUITests_Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverDemoUITests_Debug.swift; path = VoiceOverDemoUITests/VoiceOverDemoUITests_Debug.swift; sourceTree = "<group>"; };
-		66666666666666666666FFF1 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
-		6DFCDD2DCD5C67D0715657D6 /* AccessibleExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleExpandableViewController.swift; sourceTree = SOURCE_ROOT; };
-		73AE4D9F813E2E367CFBA238 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryTableViewCell.swift; path = VoiceOverDemo/NonAccessible/CategoryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		7AFF2165D712F513AAE3EFF2 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
-		7EAC75328BB49DFDEC917117 /* VoiceOverDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VoiceOverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F990CC3AC9FA72D8780D4FA /* ContainerTestTabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerTestTabView.swift; path = VoiceOverDemo/ContainerTestTabView.swift; sourceTree = "<group>"; };
-		88888888888888888888HHH1 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
-		90D779F1B6C69450B85A7B11 /* NonAccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NonAccessibleContainerTestViewController.swift; path = VoiceOverDemo/NonAccessible/NonAccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
-		9CB44B109C9F249C847D8303 /* VoiceOverDemoUITests_CoordinateBased.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverDemoUITests_CoordinateBased.swift; path = VoiceOverDemoUITests/VoiceOverDemoUITests_CoordinateBased.swift; sourceTree = "<group>"; };
+		3471F021B6E97FA0E21B0009 /* NonAccessibleRadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleRadioButtonViewController.swift; sourceTree = "<group>"; };
+		36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContainerCell.swift; sourceTree = "<group>"; };
+		39ED434C00566D60543D7E03 /* AccessibleSeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSeasonCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A56BDD085678191F98A0F77 /* NonAccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleDemoView.swift; sourceTree = "<group>"; };
+		3FEBC9AF2AB9214AAF1A1B0D /* NonAccessibleFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleFoodCell.swift; sourceTree = "<group>"; };
+		421879DC443AAB32B7EF2CC5 /* NonAccessibleHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleHorizontalCell.swift; sourceTree = "<group>"; };
+		4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		544B8CA6DE4F05B9D9136EED /* AccessibleExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleExpandableViewController.swift; sourceTree = "<group>"; };
+		5A10958F3EE1D1563AB9AD88 /* NonAccessibleSwiftUIContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleSwiftUIContainerDemoView.swift; sourceTree = "<group>"; };
+		61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
+		70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
+		76B8A0379B7E678FD71653BF /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
+		77FC046A6AD943927E99FDF1 /* CustomScrollDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoViewController.swift; sourceTree = "<group>"; };
+		7EAC75328BB49DFDEC917117 /* VoiceOverDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOverDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86229D2EEB5C359D7D09AF77 /* WebViewDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoView.swift; sourceTree = "<group>"; };
+		91F217C2B92DEEA9E26144F9 /* AccessibleCategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleCategoryHeaderView.swift; sourceTree = "<group>"; };
+		92835386EF7912B68522539E /* NonAccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
+		95D4843630872C3DBAEFCCD3 /* RadioButtonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonTabView.swift; sourceTree = "<group>"; };
+		9BBD474B8A0CF2E6262AF9C4 /* ExpandableDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableDataModel.swift; sourceTree = "<group>"; };
+		9F2BEE79F08CFA847056041C /* NonAccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
+		A0A8EF18F5E62E96B4ADBD64 /* ContainerTestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTestDataModel.swift; sourceTree = "<group>"; };
 		A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemoApp.swift; sourceTree = "<group>"; };
-		A77FDDB1030BEC91A719E57D /* ExpandableDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/ExpandableDataModel.swift; sourceTree = SOURCE_ROOT; };
-		AA0E45C0ED54DAF6D7E3717B /* ExpandableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/NonAccessible/ExpandableHeaderCell.swift; sourceTree = SOURCE_ROOT; };
-		AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
-		ACATCELL2222222222222222 /* AccessibleCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleCategoryTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		ACC222222222222222222222 /* AccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleDemoView.swift; sourceTree = "<group>"; };
-		ACSEASONCELL222222222222 /* AccessibleSeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/Accessible/AccessibleSeasonCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		ARBDEMO2222222222222222 /* AccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
-		B603C7B486A6D4AB7F1367AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B78994EBD19F131D6F5F2239 /* CollectionViewContainerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CollectionViewContainerCell.swift; sourceTree = "<group>"; };
+		A2742D1E974214D53F5B4C81 /* SwiftUIContainerTestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIContainerTestTabView.swift; sourceTree = "<group>"; };
+		A7B8600F1AEC5150AE6FB6A3 /* AccessibleExpandableDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleExpandableDemoView.swift; sourceTree = "<group>"; };
+		ABFD699F6A94E01F12A07925 /* ExpandableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderCell.swift; sourceTree = "<group>"; };
+		AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
+		B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
+		B1D037EA748DB85E7D77240B /* AccessibleSwiftUIContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUIContainerDemoView.swift; sourceTree = "<group>"; };
+		BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollTableViewCell.swift; sourceTree = "<group>"; };
+		BDF05D3FEEE77B92503CFBD9 /* AccessibleCollectionViewContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleCollectionViewContainerCell.swift; sourceTree = "<group>"; };
+		BECC85AE0610F315F166E8B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA3A803710E5E5B0160B6748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollTableViewCell.swift; sourceTree = "<group>"; };
-		CD1EFE40854630285C89275A /* AccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibleContainerTestDemoView.swift; path = VoiceOverDemo/Accessible/AccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
-		D9A51EE8E6CD73574FE0E236 /* AccessibleCollectionViewContainerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccessibleCollectionViewContainerCell.swift; sourceTree = "<group>"; };
-		DEMOTAB2222222222222222 /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
-		DF0BAE44ADFC0BB0EBC28336 /* ExpandableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/ExpandableTabView.swift; sourceTree = SOURCE_ROOT; };
-		E446BB77010264616B7628F9 /* ContainerTestDataModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerTestDataModel.swift; path = VoiceOverDemo/ContainerTestDataModel.swift; sourceTree = "<group>"; };
-		E4F7BE70D938E42BCDA20272 /* VoiceOverDemoUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoiceOverDemoUITests.swift; path = VoiceOverDemoUITests/VoiceOverDemoUITests.swift; sourceTree = "<group>"; };
-		E5B89E9AA88E2228FD0F937F /* NonAccessibleExpandableDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/NonAccessible/NonAccessibleExpandableDemoView.swift; sourceTree = SOURCE_ROOT; };
-		EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
-		FB204650C2DABAACA92208DF /* AccessibleCategoryHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AccessibleCategoryHeaderView.swift; sourceTree = "<group>"; };
-		FECCABE8EC3A07B117216459 /* NonAccessibleExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/NonAccessible/NonAccessibleExpandableViewController.swift; sourceTree = SOURCE_ROOT; };
-		INF3333333333333333333333 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		INF4444444444444444444444 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		LOC3333333333333333333333 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		LOC4444444444444444444444 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		NAC222222222222222222222 /* NonAccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleDemoView.swift; sourceTree = "<group>"; };
-		NAC444444444444444444444 /* NonAccessibleFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleFoodCell.swift; sourceTree = "<group>"; };
-		NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleHorizontalCell.swift; sourceTree = "<group>"; };
-		NAC888888888888888888888 /* NonAccessibleTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleTitleCell.swift; sourceTree = "<group>"; };
-		NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleViewController.swift; sourceTree = "<group>"; };
-		NARBDEMO222222222222222 /* NonAccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
-		NRBDEMO2222222222222222 /* NonAccessibleRadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleRadioButtonViewController.swift; sourceTree = "<group>"; };
-		RBDEMO222222222222222222 /* RadioButtonDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDemoViewController.swift; sourceTree = "<group>"; };
-		RBTAB22222222222222222 /* RadioButtonTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonTabView.swift; sourceTree = "<group>"; };
-		WEBVIEW2222222222222222 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		WEBVIEWDEMO22222222222 /* WebViewDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewDemoView.swift; sourceTree = "<group>"; };
+		CC51C4221BB45DFF13797AFD /* AccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleDemoView.swift; sourceTree = "<group>"; };
+		D075BCB806858AFA7653E909 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8D7665F3F0E507D678AF022 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAA5FF3E7FBC2FDB59DEEEB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E1B1B942A91892F110917186 /* AccessibleExpandableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleExpandableItemCell.swift; sourceTree = "<group>"; };
+		E2756E0BF89768F82F9B810B /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8832C20166D52CD1C3FA16F /* NonAccessibleExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleExpandableViewController.swift; sourceTree = "<group>"; };
+		EDD68E1D4CCDCB6F01640AFF /* RadioButtonDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDemoViewController.swift; sourceTree = "<group>"; };
+		EEBFC7E5CD5215244CD54585 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		F214C0FB2FFCBF1A33CE7130 /* NonAccessibleExpandableDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleExpandableDemoView.swift; sourceTree = "<group>"; };
+		F86F9E375B155B8A1CCD4088 /* AccessibleCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		F87ED18350BF8127C9802202 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		F8F74F05D23C4293178BADC2 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		FB8286B99CA942C83B96CC3D /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
+		CEC2050813D74B1786C56A10 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
+		86880F594B5447A391EC395E /* AccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
+		F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITableViewContainerTestTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		E669C72B3B20105D27FAC7B5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F3358C580A44B6CFA25F4D8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		633BDF92D293424E103B2E4F /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				7EAC75328BB49DFDEC917117 /* VoiceOverDemo.app */,
-				0EE93FBB88A92062F1387290 /* VoiceOverDemoUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		65BD57F04D49D5FABEBC2708 /* VoiceOverDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E4F7BE70D938E42BCDA20272 /* VoiceOverDemoUITests.swift */,
-				4729D822B60FA6F1261AE20A /* VoiceOverDemoUITests_Complete.swift */,
-				9CB44B109C9F249C847D8303 /* VoiceOverDemoUITests_CoordinateBased.swift */,
-				224C74F99B60E6F8A93F5CE3 /* VoiceOverDemoUITests_FruitSpringFlow.swift */,
-				65780547A3E4125B1E94DC17 /* VoiceOverDemoUITests_Debug.swift */,
-			);
-			name = VoiceOverDemoUITests;
-			sourceTree = SOURCE_ROOT;
-		};
-		9D3D8DE7CE401017227ABD05 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B603C7B486A6D4AB7F1367AD /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		A28FEFB9BB394727B0AE916A /* VoiceOverDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ACCGRP111111111111111111 /* Accessible */,
-				NACGRP111111111111111111 /* NonAccessible */,
-				RESGRP111111111111111111 /* Resources */,
 				CA3A803710E5E5B0160B6748 /* Assets.xcassets */,
+				A0A8EF18F5E62E96B4ADBD64 /* ContainerTestDataModel.swift */,
+				222985CBF8090B41EABE5554 /* ContainerTestTabView.swift */,
 				234CDF4507AC9B3BCFE98BFB /* ContentView.swift */,
-				DEMOTAB2222222222222222 /* DemoTabView.swift */,
-				RBTAB22222222222222222 /* RadioButtonTabView.swift */,
-				66666666666666666666FFF1 /* FoodItem.swift */,
-				EEEEEEEEEEEEEEEEEEEENNN1 /* ToastView.swift */,
+				76B8A0379B7E678FD71653BF /* DemoTabView.swift */,
+				9BBD474B8A0CF2E6262AF9C4 /* ExpandableDataModel.swift */,
+				2836533DE5DEE7C6B0711198 /* ExpandableTabView.swift */,
+				4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */,
 				341790690DCB47AA4DDDABC4 /* Info.plist */,
+				95D4843630872C3DBAEFCCD3 /* RadioButtonTabView.swift */,
+				A2742D1E974214D53F5B4C81 /* SwiftUIContainerTestTabView.swift */,
+				15049E3BE714F01B8BA51995 /* ToastView.swift */,
 				A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */,
-				A77FDDB1030BEC91A719E57D /* ExpandableDataModel.swift */,
-				DF0BAE44ADFC0BB0EBC28336 /* ExpandableTabView.swift */,
-				WEBVIEW2222222222222222 /* WebView.swift */,
-				WEBVIEWDEMO22222222222 /* WebViewDemoView.swift */,
-			);
+				F87ED18350BF8127C9802202 /* WebView.swift */,
+				86229D2EEB5C359D7D09AF77 /* WebViewDemoView.swift */,
+				F655F1E023BFFF8EB736985A /* Accessible */,
+				AA5B8664490F6B5781513991 /* NonAccessible */,
+				AC56ACFB74BD9159F20A0DF2 /* Resources */,
+							F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */,
+);
 			path = VoiceOverDemo;
 			sourceTree = "<group>";
 		};
-		ACCGRP111111111111111111 /* Accessible */ = {
+		AA5B8664490F6B5781513991 /* NonAccessible */ = {
 			isa = PBXGroup;
 			children = (
-				ACC222222222222222222222 /* AccessibleDemoView.swift */,
-				ARBDEMO2222222222222222 /* AccessibleRadioButtonDemoView.swift */,
-				44444444444444444444DDD1 /* CustomScrollDemoViewController.swift */,
-				RBDEMO222222222222222222 /* RadioButtonDemoViewController.swift */,
-				AAAAAAAAAAAAAAAAAAAAAJJJ1 /* FoodCollectionViewCell.swift */,
-				CCCCCCCCCCCCCCCCCCCCCLLL1 /* HorizontalScrollTableViewCell.swift */,
-				88888888888888888888HHH1 /* TitleTableViewCell.swift */,
-				4E2D389C7168C960646E65B1 /* AccessibleExpandableDemoView.swift */,
-				6DFCDD2DCD5C67D0715657D6 /* AccessibleExpandableViewController.swift */,
-				2D9F7535D583AA40E39ECE61 /* AccessibleExpandableHeaderCell.swift */,
-				0F0425E6F5A19DCA8307FFA1 /* AccessibleExpandableItemCell.swift */,
-				ACATCELL2222222222222222 /* AccessibleCategoryTableViewCell.swift */,
-				ACSEASONCELL222222222222 /* AccessibleSeasonCollectionViewCell.swift */,
-				FB204650C2DABAACA92208DF /* AccessibleCategoryHeaderView.swift */,
-				D9A51EE8E6CD73574FE0E236 /* AccessibleCollectionViewContainerCell.swift */,
-			);
-			path = Accessible;
+				FB8286B99CA942C83B96CC3D /* CategoryHeaderView.swift */,
+				EEBFC7E5CD5215244CD54585 /* CategoryTableViewCell.swift */,
+				36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */,
+				ABFD699F6A94E01F12A07925 /* ExpandableHeaderCell.swift */,
+				25F0289D33F107F71F95DC80 /* ExpandableItemCell.swift */,
+				AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */,
+				9F2BEE79F08CFA847056041C /* NonAccessibleContainerTestViewController.swift */,
+				3A56BDD085678191F98A0F77 /* NonAccessibleDemoView.swift */,
+				F214C0FB2FFCBF1A33CE7130 /* NonAccessibleExpandableDemoView.swift */,
+				E8832C20166D52CD1C3FA16F /* NonAccessibleExpandableViewController.swift */,
+				3FEBC9AF2AB9214AAF1A1B0D /* NonAccessibleFoodCell.swift */,
+				421879DC443AAB32B7EF2CC5 /* NonAccessibleHorizontalCell.swift */,
+				92835386EF7912B68522539E /* NonAccessibleRadioButtonDemoView.swift */,
+				3471F021B6E97FA0E21B0009 /* NonAccessibleRadioButtonViewController.swift */,
+				5A10958F3EE1D1563AB9AD88 /* NonAccessibleSwiftUIContainerDemoView.swift */,
+				2DB1CDFDC333107C521706FA /* NonAccessibleTitleCell.swift */,
+				089A837DA8084F73997C9195 /* NonAccessibleViewController.swift */,
+				E2756E0BF89768F82F9B810B /* SeasonCollectionViewCell.swift */,
+							CEC2050813D74B1786C56A10 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */,
+);
+			path = NonAccessible;
 			sourceTree = "<group>";
 		};
-		D4B5F3FEFE44470C8D06AC01 /* Frameworks */ = {
+		AC56ACFB74BD9159F20A0DF2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9D3D8DE7CE401017227ABD05 /* iOS */,
+				5FDB51E7BF3BD4526C7BEF74 /* InfoPlist.strings */,
+				790FBACAE286B0A51B787C61 /* Localizable.strings */,
 			);
-			name = Frameworks;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E5E1292E40B52AC040EB2517 = {
@@ -237,46 +201,33 @@
 			children = (
 				A28FEFB9BB394727B0AE916A /* VoiceOverDemo */,
 				633BDF92D293424E103B2E4F /* Products */,
-				D4B5F3FEFE44470C8D06AC01 /* Frameworks */,
-				65BD57F04D49D5FABEBC2708 /* VoiceOverDemoUITests */,
-				6513487CB269DBA97D4E0E77 /* SeasonCollectionViewCell.swift */,
-				73AE4D9F813E2E367CFBA238 /* CategoryTableViewCell.swift */,
-				E446BB77010264616B7628F9 /* ContainerTestDataModel.swift */,
-				7F990CC3AC9FA72D8780D4FA /* ContainerTestTabView.swift */,
-				90D779F1B6C69450B85A7B11 /* NonAccessibleContainerTestViewController.swift */,
-				134E90CD4382A98487A11929 /* NonAccessibleContainerTestDemoView.swift */,
-				07D25E752484AB392C75E350 /* AccessibleContainerTestViewController.swift */,
-				CD1EFE40854630285C89275A /* AccessibleContainerTestDemoView.swift */,
 			);
 			sourceTree = "<group>";
 		};
-		NACGRP111111111111111111 /* NonAccessible */ = {
+		F655F1E023BFFF8EB736985A /* Accessible */ = {
 			isa = PBXGroup;
 			children = (
-				NAC222222222222222222222 /* NonAccessibleDemoView.swift */,
-				NARBDEMO222222222222222 /* NonAccessibleRadioButtonDemoView.swift */,
-				NAC444444444444444444444 /* NonAccessibleFoodCell.swift */,
-				NAC666666666666666666666 /* NonAccessibleHorizontalCell.swift */,
-				NAC888888888888888888888 /* NonAccessibleTitleCell.swift */,
-				NACAAAAAAAAAAAAAAAAAAAAAA /* NonAccessibleViewController.swift */,
-				NRBDEMO2222222222222222 /* NonAccessibleRadioButtonViewController.swift */,
-				AA0E45C0ED54DAF6D7E3717B /* ExpandableHeaderCell.swift */,
-				30AFC5FD588B8F48018DC300 /* ExpandableItemCell.swift */,
-				FECCABE8EC3A07B117216459 /* NonAccessibleExpandableViewController.swift */,
-				E5B89E9AA88E2228FD0F937F /* NonAccessibleExpandableDemoView.swift */,
-				7AFF2165D712F513AAE3EFF2 /* CategoryHeaderView.swift */,
-				B78994EBD19F131D6F5F2239 /* CollectionViewContainerCell.swift */,
-			);
-			path = NonAccessible;
-			sourceTree = "<group>";
-		};
-		RESGRP111111111111111111 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				LOC2222222222222222222222 /* Localizable.strings */,
-				INF2222222222222222222222 /* InfoPlist.strings */,
-			);
-			path = Resources;
+				91F217C2B92DEEA9E26144F9 /* AccessibleCategoryHeaderView.swift */,
+				F86F9E375B155B8A1CCD4088 /* AccessibleCategoryTableViewCell.swift */,
+				BDF05D3FEEE77B92503CFBD9 /* AccessibleCollectionViewContainerCell.swift */,
+				61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */,
+				B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */,
+				CC51C4221BB45DFF13797AFD /* AccessibleDemoView.swift */,
+				A7B8600F1AEC5150AE6FB6A3 /* AccessibleExpandableDemoView.swift */,
+				236208D8D7AFCB2664A15D7D /* AccessibleExpandableHeaderCell.swift */,
+				E1B1B942A91892F110917186 /* AccessibleExpandableItemCell.swift */,
+				544B8CA6DE4F05B9D9136EED /* AccessibleExpandableViewController.swift */,
+				70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */,
+				39ED434C00566D60543D7E03 /* AccessibleSeasonCollectionViewCell.swift */,
+				B1D037EA748DB85E7D77240B /* AccessibleSwiftUIContainerDemoView.swift */,
+				77FC046A6AD943927E99FDF1 /* CustomScrollDemoViewController.swift */,
+				1B2D02B3D3C9954BC10B943D /* FoodCollectionViewCell.swift */,
+				BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */,
+				EDD68E1D4CCDCB6F01640AFF /* RadioButtonDemoViewController.swift */,
+				F8F74F05D23C4293178BADC2 /* TitleTableViewCell.swift */,
+							86880F594B5447A391EC395E /* AccessibleSwiftUITableViewContainerDemoView.swift */,
+);
+			path = Accessible;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,27 +245,11 @@
 			dependencies = (
 			);
 			name = VoiceOverDemo;
+			packageProductDependencies = (
+			);
 			productName = VoiceOverDemo;
 			productReference = 7EAC75328BB49DFDEC917117 /* VoiceOverDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		22959A3AF0ADEDEF2AF5FFA9 /* VoiceOverDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4D9DBF4335BE2E6E30EFF02 /* Build configuration list for PBXNativeTarget "VoiceOverDemoUITests" */;
-			buildPhases = (
-				B403AA00438B2FA3A9A01D9C /* Sources */,
-				E669C72B3B20105D27FAC7B5 /* Frameworks */,
-				F69323BEDC3FD2CF5BDB75EC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5874F3422A87AF2817CF079 /* PBXTargetDependency */,
-			);
-			name = VoiceOverDemoUITests;
-			productName = VoiceOverDemoUITests;
-			productReference = 0EE93FBB88A92062F1387290 /* VoiceOverDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -324,11 +259,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-					06745594AC0636354E01F25C = {
-						DevelopmentTeam = CT8CT953JS;
-					};
-				};
 			};
 			buildConfigurationList = 20B6A9B8E0C10163483CF9A1 /* Build configuration list for PBXProject "VoiceOverDemo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -336,18 +266,15 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
-				ko,
 				en,
+				ko,
 			);
 			mainGroup = E5E1292E40B52AC040EB2517;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = 633BDF92D293424E103B2E4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				06745594AC0636354E01F25C /* VoiceOverDemo */,
-				22959A3AF0ADEDEF2AF5FFA9 /* VoiceOverDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -358,15 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F12592D0B0AB5EC40888C995 /* Assets.xcassets in Resources */,
-				LOC1111111111111111111111 /* Localizable.strings in Resources */,
-				INF1111111111111111111111 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F69323BEDC3FD2CF5BDB75EC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				37652A0ECE257242BD4E4BE9 /* InfoPlist.strings in Resources */,
+				61AD7A7A1D7371C8161D603F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,95 +297,78 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1CB7F5EF854A3E9E41C36C /* AccessibleCategoryHeaderView.swift in Sources */,
+				AEC0EF13F6A26B5D02672574 /* AccessibleCategoryTableViewCell.swift in Sources */,
+				F0DB0E20A3638DB824889990 /* AccessibleCollectionViewContainerCell.swift in Sources */,
+				5F1D04D97C77B0C2E98CCB2A /* AccessibleContainerTestDemoView.swift in Sources */,
+				A8A6CCBB425F4BF22FAD5D4C /* AccessibleContainerTestViewController.swift in Sources */,
+				DC309CE43F93A31A41A66431 /* AccessibleDemoView.swift in Sources */,
+				38370B0A07225E64D4D896F4 /* AccessibleExpandableDemoView.swift in Sources */,
+				BA8943F550A6C1CC1EDEA842 /* AccessibleExpandableHeaderCell.swift in Sources */,
+				414FB86D47FA1BD32E0EC078 /* AccessibleExpandableItemCell.swift in Sources */,
+				7E78EE91F94029E20A92CD1B /* AccessibleExpandableViewController.swift in Sources */,
+				BB35DFD9AA70D746C73E9852 /* AccessibleRadioButtonDemoView.swift in Sources */,
+				544A5E46174298EC6B747E92 /* AccessibleSeasonCollectionViewCell.swift in Sources */,
+				F21B72FBDFCC6E0D01B8D7F1 /* AccessibleSwiftUIContainerDemoView.swift in Sources */,
+				AC84E95789ED02A7FE6EDA1E /* CategoryHeaderView.swift in Sources */,
+				3D9B873F56D3AA59F1759CB6 /* CategoryTableViewCell.swift in Sources */,
+				A3FAAD9F207314F0DBBF83C9 /* CollectionViewContainerCell.swift in Sources */,
+				1FC38CAC7AEA14A327F06BBF /* ContainerTestDataModel.swift in Sources */,
+				DB78668E4DE5047C1A70E524 /* ContainerTestTabView.swift in Sources */,
 				D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */,
-				33333333333333333333CCC1 /* CustomScrollDemoViewController.swift in Sources */,
-				DEMOTAB1111111111111111 /* DemoTabView.swift in Sources */,
-				RBTAB11111111111111111 /* RadioButtonTabView.swift in Sources */,
-				55555555555555555555EEE1 /* FoodItem.swift in Sources */,
-				77777777777777777777GGG1 /* TitleTableViewCell.swift in Sources */,
-				99999999999999999999III1 /* FoodCollectionViewCell.swift in Sources */,
-				BBBBBBBBBBBBBBBBBBBBKKKK1 /* HorizontalScrollTableViewCell.swift in Sources */,
-				DDDDDDDDDDDDDDDDDDDDMMM1 /* ToastView.swift in Sources */,
-				ACC111111111111111111111 /* AccessibleDemoView.swift in Sources */,
-				ARBDEMO1111111111111111 /* AccessibleRadioButtonDemoView.swift in Sources */,
-				RBDEMO111111111111111111 /* RadioButtonDemoViewController.swift in Sources */,
-				NAC111111111111111111111 /* NonAccessibleDemoView.swift in Sources */,
-				NARBDEMO111111111111111 /* NonAccessibleRadioButtonDemoView.swift in Sources */,
-				NRBDEMO1111111111111111 /* NonAccessibleRadioButtonViewController.swift in Sources */,
-				NAC333333333333333333333 /* NonAccessibleFoodCell.swift in Sources */,
-				NAC555555555555555555555 /* NonAccessibleHorizontalCell.swift in Sources */,
-				NAC777777777777777777777 /* NonAccessibleTitleCell.swift in Sources */,
-				NAC999999999999999999999 /* NonAccessibleViewController.swift in Sources */,
+				26A37D1A824D6B9E861D286C /* CustomScrollDemoViewController.swift in Sources */,
+				ACA93ADD4CBA8C2A008DFC98 /* DemoTabView.swift in Sources */,
+				FA4379CBF5DEC1E5CD65B0D4 /* ExpandableDataModel.swift in Sources */,
+				DD10319C8E9CD25B0557CD8F /* ExpandableHeaderCell.swift in Sources */,
+				CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */,
+				FCC00EA72AD431C4A47DDEB9 /* ExpandableTabView.swift in Sources */,
+				F171D1E57CB2D08B35DEC049 /* FoodCollectionViewCell.swift in Sources */,
+				FDAD547CEF829DF2A7BD6C61 /* FoodItem.swift in Sources */,
+				012B44AD28FF416996E43296 /* HorizontalScrollTableViewCell.swift in Sources */,
+				6129AB56E526024BE9E9DCC5 /* NonAccessibleContainerTestDemoView.swift in Sources */,
+				2175A4D6CBCE4B5C7DEF2DAA /* NonAccessibleContainerTestViewController.swift in Sources */,
+				7BE8068F83BC208806215B8B /* NonAccessibleDemoView.swift in Sources */,
+				EDC41EA160BAA04526346585 /* NonAccessibleExpandableDemoView.swift in Sources */,
+				66B322C2959FE73F6E3AABEE /* NonAccessibleExpandableViewController.swift in Sources */,
+				2A716C3D9F1E63AD7EE7CE8D /* NonAccessibleFoodCell.swift in Sources */,
+				82453852E2449CB0228D6B75 /* NonAccessibleHorizontalCell.swift in Sources */,
+				8736F563C9EDA54FD3BCB590 /* NonAccessibleRadioButtonDemoView.swift in Sources */,
+				08DA6E58D92F3E1A750C6DD6 /* NonAccessibleRadioButtonViewController.swift in Sources */,
+				1F1166E9BC386A8AAA1C546C /* NonAccessibleSwiftUIContainerDemoView.swift in Sources */,
+				0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */,
+				8488E6F334724456F91CA25C /* NonAccessibleViewController.swift in Sources */,
+				77966C57DEBCD8958DA1AAA5 /* RadioButtonDemoViewController.swift in Sources */,
+				33F812453E4A115C2D8C64C6 /* RadioButtonTabView.swift in Sources */,
+				78728711C8147C9CA3CFF26C /* SeasonCollectionViewCell.swift in Sources */,
+				94A6665CD7732717DC5560B9 /* SwiftUIContainerTestTabView.swift in Sources */,
+				BBBF95BBB4C9E7DE12471835 /* TitleTableViewCell.swift in Sources */,
+				43E8B3DCF857BE09EA7BC884 /* ToastView.swift in Sources */,
 				66099B44A818983E0B5AD541 /* VoiceOverDemoApp.swift in Sources */,
-				FE40C1627936C51CC5EE4106 /* ExpandableDataModel.swift in Sources */,
-				565D7ABC6F7BBB566197F67A /* ExpandableTabView.swift in Sources */,
-				5FBE202D32EEB8284C7290AB /* ExpandableHeaderCell.swift in Sources */,
-				118A585E0204B9A48FEEEEC4 /* ExpandableItemCell.swift in Sources */,
-				CFFB2F121FD52D850B4F98B4 /* NonAccessibleExpandableViewController.swift in Sources */,
-				900E3044059BDF4AAC3C5AE0 /* NonAccessibleExpandableDemoView.swift in Sources */,
-				ED82E82C3D7089ECF27AE624 /* AccessibleExpandableDemoView.swift in Sources */,
-				8FD0B77214B5EBA634FB0626 /* AccessibleExpandableViewController.swift in Sources */,
-				3BC5860A0B2B9369EFBE8027 /* AccessibleExpandableHeaderCell.swift in Sources */,
-				182422204D398689BC2A8414 /* AccessibleExpandableItemCell.swift in Sources */,
-				ACATCELL1111111111111111 /* AccessibleCategoryTableViewCell.swift in Sources */,
-				ACSEASONCELL111111111111 /* AccessibleSeasonCollectionViewCell.swift in Sources */,
-				B0FF40DF8AF2AF960FA83832 /* SeasonCollectionViewCell.swift in Sources */,
-				8EE24275956BCCA8BAB08EFD /* CategoryTableViewCell.swift in Sources */,
-				C63765E1A7522B45339152AA /* AccessibleCategoryHeaderView.swift in Sources */,
-				4295732BD476074C0E7F0985 /* AccessibleCollectionViewContainerCell.swift in Sources */,
-				3B2E02559178144D0A71416B /* CategoryHeaderView.swift in Sources */,
-				43F65148887052B4423182BA /* CollectionViewContainerCell.swift in Sources */,
-				WEBVIEW1111111111111111 /* WebView.swift in Sources */,
-				WEBVIEWDEMO11111111111 /* WebViewDemoView.swift in Sources */,
-				86D2EB6273404E93985B622C /* ContainerTestDataModel.swift in Sources */,
-				BD6EB5EEEF576CB7DBDB5DE4 /* ContainerTestTabView.swift in Sources */,
-				19D9B0DE6A88EDFDE1372BFC /* NonAccessibleContainerTestViewController.swift in Sources */,
-				40CAAE475A9DFCC2895C6DF9 /* NonAccessibleContainerTestDemoView.swift in Sources */,
-				B32A1678D3E36A48A5024364 /* AccessibleContainerTestViewController.swift in Sources */,
-				C6429230A8C9FDFF81423105 /* AccessibleContainerTestDemoView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B403AA00438B2FA3A9A01D9C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4ADC035674DEAC283B4736F /* VoiceOverDemoUITests.swift in Sources */,
-				D4493931103438B760B660D7 /* VoiceOverDemoUITests_Complete.swift in Sources */,
-				62CA68588F5F95E47275A3AA /* VoiceOverDemoUITests_CoordinateBased.swift in Sources */,
-				85EF63166807D525EDF626FD /* VoiceOverDemoUITests_FruitSpringFlow.swift in Sources */,
-				8D154EF733D9AFD53F256C51 /* VoiceOverDemoUITests_Debug.swift in Sources */,
-				0F464A91A21544F25AA385F8 /* SeasonCollectionViewCell.swift in Sources */,
-				6C484ACC94771BB8DF1FA0B3 /* CategoryTableViewCell.swift in Sources */,
-			);
+				F90299DAB7394819FBA4718B /* WebView.swift in Sources */,
+				B3A0EA2EE2291D57E13073EE /* WebViewDemoView.swift in Sources */,
+						148FBB79E59645479D3ADE83 /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
+				EA54EE6D6BE84B08A5D5A1EB /* AccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
+				9E82D63D0D27432C8AA3218A /* SwiftUITableViewContainerTestTabView.swift in Sources */,
+	);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		A5874F3422A87AF2817CF079 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = VoiceOverDemo;
-			target = 06745594AC0636354E01F25C /* VoiceOverDemo */;
-			targetProxy = 8825649C42C1EEE0884ADF6D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		INF2222222222222222222222 /* InfoPlist.strings */ = {
+		5FDB51E7BF3BD4526C7BEF74 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				INF3333333333333333333333 /* ko */,
-				INF4444444444444444444444 /* en */,
+				BECC85AE0610F315F166E8B1 /* en */,
+				D075BCB806858AFA7653E909 /* ko */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		LOC2222222222222222222222 /* Localizable.strings */ = {
+		790FBACAE286B0A51B787C61 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				LOC3333333333333333333333 /* ko */,
-				LOC4444444444444444444444 /* en */,
+				DAA5FF3E7FBC2FDB59DEEEB2 /* en */,
+				D8D7665F3F0E507D678AF022 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -473,24 +376,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		134D87504C1FFADE453762E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.voiceoverdemo.VoiceOverDemoUITests;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VoiceOverDemo;
-			};
-			name = Debug;
-		};
 		14F6E92B98A5D6DA5675C917 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,31 +432,11 @@
 			};
 			name = Release;
 		};
-		1639EC20FC60475D582DA56E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.voiceoverdemo.VoiceOverDemoUITests;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VoiceOverDemo;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		17EC368D222ED1D1ABFB14F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT8CT953JS;
 				INFOPLIST_FILE = VoiceOverDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,7 +517,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT8CT953JS;
 				INFOPLIST_FILE = VoiceOverDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -685,15 +549,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
-		};
-		E4D9DBF4335BE2E6E30EFF02 /* Build configuration list for PBXNativeTarget "VoiceOverDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1639EC20FC60475D582DA56E /* Release */,
-				134D87504C1FFADE453762E1 /* Debug */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

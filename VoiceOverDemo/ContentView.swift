@@ -59,6 +59,28 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: SwiftUIContainerTestTabView()) {
+                    Text("SwiftUI 컨테이너 테스트")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.pink)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
+                NavigationLink(destination: SwiftUITableViewContainerTestTabView()) {
+                    Text("SwiftUI 테이블뷰 컨테이너 테스트")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.teal)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))
