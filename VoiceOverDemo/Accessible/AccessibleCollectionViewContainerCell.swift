@@ -74,6 +74,16 @@ class AccessibleCollectionViewContainerCell: UITableViewCell {
         accessibilityElements = [collectionView]
 
         collectionView.reloadData()
+
+        // CollectionView의 접근성 요소 업데이트
+        updateCollectionViewAccessibility()
+    }
+
+    func updateCollectionViewAccessibility() {
+        // CollectionView 내부의 visible cells를 접근성 요소로 설정
+        DispatchQueue.main.async {
+            let visibleCells = self.collectionView.visibleCells
+        }
     }
 
     // MARK: - Reuse

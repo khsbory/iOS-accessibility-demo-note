@@ -15,8 +15,6 @@ class AccessibleExpandableHeaderCell: UITableViewCell {
     private let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.isAccessibilityElement = true
-        view.accessibilityTraits = .button
         return view
     }()
 
@@ -69,6 +67,10 @@ class AccessibleExpandableHeaderCell: UITableViewCell {
     private func setupUI() {
         backgroundColor = .systemBackground
         selectionStyle = .none
+
+        // 셀 자체를 접근성 요소로 설정
+        isAccessibilityElement = true
+        accessibilityTraits = .button
 
         contentView.addSubview(containerView)
         containerView.addSubview(emojiLabel)
@@ -153,13 +155,13 @@ class AccessibleExpandableHeaderCell: UITableViewCell {
     private func updateAccessibility(item: ExpandableItem) {
         // 접근성 레이블: 이모지 + 제목
         let label = "\(item.emoji) \(NSLocalizedString(item.title, comment: ""))"
-        containerView.accessibilityLabel = label
+        accessibilityLabel = label
 
         // 접근성 밸류: 확장/축소 상태
         if item.isExpanded {
-            containerView.accessibilityValue = NSLocalizedString("expanded", comment: "확장됨")
+            accessibilityValue = NSLocalizedString("expanded", comment: "확장됨")
         } else {
-            containerView.accessibilityValue = NSLocalizedString("collapsed", comment: "축소됨")
+            accessibilityValue = NSLocalizedString("collapsed", comment: "축소됨")
         }
     }
 

@@ -48,6 +48,17 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: ContainerTestTabView()) {
+                    Text("접근성 컨테이너 테스트")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))

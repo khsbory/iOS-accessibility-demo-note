@@ -152,11 +152,34 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
             let totalHeight = CGFloat(items.count) * itemHeight + CGFloat(items.count - 1) * spacing
             stackHeightConstraint?.constant = totalHeight
 
+            // 접근성 요소는 상위 CollectionView에서 관리
+            isAccessibilityElement = false
             accessibilityElements = [headerView, itemsStackView]
+
+            // 봄 과일: 시맨틱 그룹 설정
+            if season.id == "fruits.spring" {
+                itemsStackView.accessibilityContainerType = .semanticGroup
+                itemsStackView.accessibilityLabel = "봄 과일 목록"
+            }
+            // 여름 과일: 리스트 컨테이너 설정 (동적 요소)
+            else if season.id == "fruits.summer" {
+                itemsStackView.accessibilityContainerType = .list
+                itemsStackView.accessibilityLabel = "여름 과일 목록"
+                // 동적으로 아이템 개수를 접근성 요소로 설정
+                itemsStackView.accessibilityElements = itemsStackView.arrangedSubviews
+            }
+
+            // 0.5초 후 확장된 셀로 포커스 이동 (VoiceOver가 켜져 있을 때만)
+            if UIAccessibility.isVoiceOverRunning {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    UIAccessibility.post(notification: .layoutChanged, argument: self.headerView)
+                }
+            }
         } else {
             // Remove items
             itemsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
             itemsStackView.isHidden = true
+            itemsStackView.isAccessibilityElement = false
             stackHeightConstraint?.constant = 0
 
             isAccessibilityElement = true
@@ -172,6 +195,13 @@ class AccessibleSeasonCollectionViewCell: UICollectionViewCell {
         if let collectionView = superview as? UICollectionView {
             UIView.animate(withDuration: 0.3) {
                 collectionView.collectionViewLayout.invalidateLayout()
+            }
+
+            // 접근성 요소 업데이트
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                if let containerCell = collectionView.superview?.superview as? AccessibleCollectionViewContainerCell {
+                    containerCell.updateCollectionViewAccessibility()
+                }
             }
         }
     }
