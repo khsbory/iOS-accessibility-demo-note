@@ -81,6 +81,17 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: CustomTabBarView()) {
+                    Text("커스텀 탭바")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.indigo)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 Spacer()
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))

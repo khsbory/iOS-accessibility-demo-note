@@ -5,14 +5,15 @@ struct WebViewDemoView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            if let url = URL(string: "https://rpp.gmarket.co.kr/?exhib=257140") {
+            if let url = URL(string: "https://khsruru.com/textfield") {
                 WebView(url: url)
+                    .ignoresSafeArea(.all, edges: .horizontal)
             } else {
                 Text("Invalid URL")
                     .foregroundColor(.red)
             }
         }
-        .navigationTitle(NSLocalizedString("navigation.title.webView", comment: ""))
+        .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {

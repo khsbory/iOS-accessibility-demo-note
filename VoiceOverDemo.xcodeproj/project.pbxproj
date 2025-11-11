@@ -62,6 +62,8 @@
 		148FBB79E59645479D3ADE83 /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2050813D74B1786C56A10 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */; };
 		EA54EE6D6BE84B08A5D5A1EB /* AccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86880F594B5447A391EC395E /* AccessibleSwiftUITableViewContainerDemoView.swift */; };
 		9E82D63D0D27432C8AA3218A /* SwiftUITableViewContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */; };
+		473CA2C80C6848D8AFE99D1E /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C0007FAAF4009955B0155 /* CustomTabBarViewController.swift */; };
+		E0A748CA41F243F1AC973B9F /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378344F15E5248C3A3FF506D /* CustomTabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		CEC2050813D74B1786C56A10 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
 		86880F594B5447A391EC395E /* AccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
 		F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITableViewContainerTestTabView.swift; sourceTree = "<group>"; };
+		B20C0007FAAF4009955B0155 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		378344F15E5248C3A3FF506D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -156,7 +160,9 @@
 				F655F1E023BFFF8EB736985A /* Accessible */,
 				AA5B8664490F6B5781513991 /* NonAccessible */,
 				AC56ACFB74BD9159F20A0DF2 /* Resources */,
-							F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */,
+							B20C0007FAAF4009955B0155 /* CustomTabBarViewController.swift */,
+				378344F15E5248C3A3FF506D /* CustomTabBarView.swift */,
+				F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */,
 );
 			path = VoiceOverDemo;
 			sourceTree = "<group>";
@@ -348,6 +354,8 @@
 				B3A0EA2EE2291D57E13073EE /* WebViewDemoView.swift in Sources */,
 						148FBB79E59645479D3ADE83 /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
 				EA54EE6D6BE84B08A5D5A1EB /* AccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
+				473CA2C80C6848D8AFE99D1E /* CustomTabBarViewController.swift in Sources */,
+				E0A748CA41F243F1AC973B9F /* CustomTabBarView.swift in Sources */,
 				9E82D63D0D27432C8AA3218A /* SwiftUITableViewContainerTestTabView.swift in Sources */,
 	);
 			runOnlyForDeploymentPostprocessing = 0;
