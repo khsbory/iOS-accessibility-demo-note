@@ -7,7 +7,7 @@ struct WebViewDemoView: View {
         VStack(spacing: 0) {
             if let url = URL(string: "https://khsruru.com/textfield") {
                 WebView(url: url)
-                    .ignoresSafeArea(.all, edges: .horizontal)
+                    .ignoresSafeArea(.all)
             } else {
                 Text("Invalid URL")
                     .foregroundColor(.red)
