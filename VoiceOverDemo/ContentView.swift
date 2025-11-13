@@ -48,6 +48,17 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
+                NavigationLink(destination: UIKitWebViewWrapper()) {
+                    Text("웹뷰 테스트 (UIKit)")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.cyan)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
                 NavigationLink(destination: ContainerTestTabView()) {
                     Text("접근성 컨테이너 테스트")
                         .font(.headline)
@@ -96,6 +107,16 @@ struct ContentView: View {
             }
             .navigationTitle(NSLocalizedString("main.title", comment: ""))
         }
+    }
+}
+
+struct UIKitWebViewWrapper: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> WebViewController {
+        return WebViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: WebViewController, context: Context) {
+        // 업데이트 필요 없음
     }
 }
 
