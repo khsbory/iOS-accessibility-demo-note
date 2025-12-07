@@ -1,9 +1,35 @@
 import UIKit
 import WebKit
+import os.log
 
 class WebViewController: UIViewController {
+    private let logger = Logger(subsystem: "com.voiceoverdemo.VoiceOverDemo", category: "WebViewController")
     private var webView: WKWebView!
     private var backButton: UIButton!
+    var dismissAction: (() -> Void)?
+
+    private func writeLog(_ message: String) {
+        let timestamp = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+        let logMessage = "[\(formatter.string(from: timestamp))] \(message)\n"
+
+        if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let logFileURL = documentsPath.appendingPathComponent("webview_debug.log")
+
+            if let data = logMessage.data(using: .utf8) {
+                if FileManager.default.fileExists(atPath: logFileURL.path) {
+                    if let fileHandle = try? FileHandle(forWritingTo: logFileURL) {
+                        fileHandle.seekToEndOfFile()
+                        fileHandle.write(data)
+                        fileHandle.closeFile()
+                    }
+                } else {
+                    try? data.write(to: logFileURL)
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,18 +37,9 @@ class WebViewController: UIViewController {
         setupWebView()
         setupBackButton()
         loadURL()
-    }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Navigation bar 완전 숨김
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        // 이전 화면으로 돌아갈 때 Navigation bar 다시 표시
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        // VoiceOver 접근성 순서 설정: 뒤로 버튼 -> 웹뷰
+        view.accessibilityElements = [backButton!, webView!]
     }
 
     private func setupWebView() {
@@ -73,8 +90,10 @@ class WebViewController: UIViewController {
         backButton.layer.shadowOffset = CGSize(width: 0, height: 2)
         backButton.layer.shadowOpacity = 0.2
         backButton.layer.shadowRadius = 4
+        backButton.layer.zPosition = 999
 
         view.addSubview(backButton)
+        view.bringSubviewToFront(backButton)
 
         // 버튼 위치 설정 (Safe Area 기준)
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -97,6 +116,17 @@ class WebViewController: UIViewController {
     }
 
     @objc private func backTapped() {
-        navigationController?.popViewController(animated: true)
+        writeLog("🔴 backTapped() called")
+        logger.info("🔴 backTapped() called")
+        NSLog("🔴🔴🔴 [WebViewController] backTapped() 호출됨!")
+
+        // SwiftUI NavigationLink로 push된 경우 dismissAction 우선 사용
+        writeLog("🔵 calling dismissAction")
+        logger.info("🔵 calling dismissAction")
+        NSLog("🔵🔵🔵 [WebViewController] dismissAction 실행")
+        dismissAction?()
+        writeLog("🔵 dismissAction completed")
+        logger.info("🔵 dismissAction completed")
+        NSLog("🔵🔵🔵 [WebViewController] dismissAction 완료")
     }
 }

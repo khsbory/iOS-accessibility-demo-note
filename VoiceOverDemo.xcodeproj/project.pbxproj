@@ -64,6 +64,7 @@
 		9E82D63D0D27432C8AA3218A /* SwiftUITableViewContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */; };
 		473CA2C80C6848D8AFE99D1E /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20C0007FAAF4009955B0155 /* CustomTabBarViewController.swift */; };
 		E0A748CA41F243F1AC973B9F /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378344F15E5248C3A3FF506D /* CustomTabBarView.swift */; };
+		ABC123DEF456789012345678 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF987654321FEDCBA098765 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		F63CF75FCB244B86A7DF1FC5 /* SwiftUITableViewContainerTestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITableViewContainerTestTabView.swift; sourceTree = "<group>"; };
 		B20C0007FAAF4009955B0155 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		378344F15E5248C3A3FF506D /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		DEF987654321FEDCBA098765 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -156,6 +158,7 @@
 				15049E3BE714F01B8BA51995 /* ToastView.swift */,
 				A1D8A0359D4F8B88366CDBF0 /* VoiceOverDemoApp.swift */,
 				F87ED18350BF8127C9802202 /* WebView.swift */,
+				DEF987654321FEDCBA098765 /* WebViewController.swift */,
 				86229D2EEB5C359D7D09AF77 /* WebViewDemoView.swift */,
 				F655F1E023BFFF8EB736985A /* Accessible */,
 				AA5B8664490F6B5781513991 /* NonAccessible */,
@@ -351,6 +354,7 @@
 				43E8B3DCF857BE09EA7BC884 /* ToastView.swift in Sources */,
 				66099B44A818983E0B5AD541 /* VoiceOverDemoApp.swift in Sources */,
 				F90299DAB7394819FBA4718B /* WebView.swift in Sources */,
+				ABC123DEF456789012345678 /* WebViewController.swift in Sources */,
 				B3A0EA2EE2291D57E13073EE /* WebViewDemoView.swift in Sources */,
 						148FBB79E59645479D3ADE83 /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
 				EA54EE6D6BE84B08A5D5A1EB /* AccessibleSwiftUITableViewContainerDemoView.swift in Sources */,

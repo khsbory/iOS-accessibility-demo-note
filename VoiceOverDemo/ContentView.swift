@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showUIKitWebView = false
+
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -48,7 +50,11 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
 
-                NavigationLink(destination: UIKitWebViewWrapper()) {
+                NavigationLink(
+                    destination: UIKitWebViewWrapper(isPresented: $showUIKitWebView)
+                        .modifier(HideNavigationBarModifier()),
+                    isActive: $showUIKitWebView
+                ) {
                     Text("웹뷰 테스트 (UIKit)")
                         .font(.headline)
                         .padding()
@@ -111,12 +117,43 @@ struct ContentView: View {
 }
 
 struct UIKitWebViewWrapper: UIViewControllerRepresentable {
+    @Binding var isPresented: Bool
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(isPresented: $isPresented)
+    }
+
     func makeUIViewController(context: Context) -> WebViewController {
-        return WebViewController()
+        let webVC = WebViewController()
+        webVC.dismissAction = {
+            context.coordinator.dismiss()
+        }
+
+        return webVC
     }
 
     func updateUIViewController(_ uiViewController: WebViewController, context: Context) {
         // 업데이트 필요 없음
+    }
+
+    class Coordinator {
+        var isPresented: Binding<Bool>
+
+        init(isPresented: Binding<Bool>) {
+            self.isPresented = isPresented
+        }
+
+        func dismiss() {
+            isPresented.wrappedValue = false
+        }
+    }
+}
+
+struct HideNavigationBarModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
     }
 }
 
