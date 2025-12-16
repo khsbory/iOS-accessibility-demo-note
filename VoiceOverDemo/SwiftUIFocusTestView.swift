@@ -51,8 +51,7 @@ struct PostRowView: View {
                         .padding(8) // 터치 영역 확보
                         .contentShape(Rectangle())
                 }
-                .accessibilityLabel("게시글 상세 보기")
-                .accessibilityHint("이동하려면 이중 탭하세요")
+                .accessibilityHidden(true)
                 // 숨겨진 네비게이션 링크 트리거
                 .background(
                     NavigationLink(destination: PostDetailView(post: post), isActive: $isDetailActive) {
