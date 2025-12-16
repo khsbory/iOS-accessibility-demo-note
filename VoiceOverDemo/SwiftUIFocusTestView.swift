@@ -76,7 +76,7 @@ struct PostRowView: View {
                         .font(.caption)
                 }
                 .foregroundColor(.gray)
-
+                .accessibilityElement(children: .combine)
                 .accessibilityLabel("조회수 \(post.viewCount)")
                 
                 HStack(spacing: 4) {
@@ -86,7 +86,7 @@ struct PostRowView: View {
                         .font(.caption)
                 }
                 .foregroundColor(.gray)
-
+                .accessibilityElement(children: .combine)
                 .accessibilityLabel("댓글수 \(post.commentCount)")
                 
                 Spacer()
