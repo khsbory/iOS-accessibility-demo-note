@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showUIKitWebView = false
+    @State private var showFocusTest = false
 
     var body: some View {
         NavigationView {
@@ -64,6 +65,33 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 .padding(.horizontal)
+
+                NavigationLink(
+                    destination: FocusTestViewControllerWrapper(isPresented: $showFocusTest)
+                        .modifier(HideNavigationBarModifier()),
+                    isActive: $showFocusTest
+                ) {
+                    Text("접근성 초점 테스트")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
+                NavigationLink(destination: SwiftUIFocusTestView()) {
+                    Text("SwiftUI 초점 테스트")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+
 
                 NavigationLink(destination: ContainerTestTabView()) {
                     Text("접근성 컨테이너 테스트")
@@ -154,6 +182,38 @@ struct HideNavigationBarModifier: ViewModifier {
         content
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
+    }
+}
+
+struct FocusTestViewControllerWrapper: UIViewControllerRepresentable {
+    @Binding var isPresented: Bool
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(isPresented: $isPresented)
+    }
+
+    func makeUIViewController(context: Context) -> FocusTestViewController {
+        let vc = FocusTestViewController()
+        vc.dismissAction = {
+            context.coordinator.dismiss()
+        }
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: FocusTestViewController, context: Context) {
+        // No update needed
+    }
+
+    class Coordinator {
+        var isPresented: Binding<Bool>
+
+        init(isPresented: Binding<Bool>) {
+            self.isPresented = isPresented
+        }
+
+        func dismiss() {
+            isPresented.wrappedValue = false
+        }
     }
 }
 
