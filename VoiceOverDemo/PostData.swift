@@ -1,6 +1,6 @@
 import Foundation
 
-struct Post: Identifiable {
+struct Post: Identifiable, Hashable {
     let id: Int
     let category: String
     let title: String

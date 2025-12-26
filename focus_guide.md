@@ -98,4 +98,49 @@ NavigationLink(
 3.  **`Binding<Bool>`** 의 `set` 클로저에서 네비게이션 진입 시 `lastFocusedID` 저장
 4.  **`onAppear`** + **`asyncAfter`** 로 복귀 시 초점 강제 이동
 
-이 패턴을 사용하면 사용자가 "뒤로" 버튼을 눌러 돌아왔을 때, 맥락을 잃지 않고 바로 다음 탐색을 이어갈 수 있어 접근성이 크게 향상됩니다.
+
+---
+
+## 📌 심화: 리스트(List) 아이템 전체에 초점 맞추기
+
+단순 버튼이 아니라, 여러 텍스트와 이미지가 섞인 **복잡한 리스트 행(Row)** 자체를 버튼처럼 동작하게 하고 초점을 복구하는 방법입니다.
+
+### 1. 컨테이너를 하나의 요소로 만들기
+`.accessibilityElement(children: .combine)`을 사용하여 내부 요소들을 하나로 묶고, 행 전체에 초점 식별자를 부여합니다.
+
+```swift
+struct PostRowView: View {
+    let post: Post
+    
+    var body: some View {
+        VStack {
+            Text(post.title)
+            Text(post.content)
+        }
+        // ✅ 1. VoiceOver가 내부 자식들을 따로 읽지 않고 덩어리로 인식하게 함
+        .accessibilityElement(children: .combine)
+        // ✅ 2. 버튼 특성 부여 ("~ 버튼" 이라고 읽어줌)
+        .accessibilityAddTraits(.isButton)
+    }
+}
+```
+
+### 2. ForEach에서 초점 연결하기
+`List`나 `ForEach`를 사용할 때는 데이터 모델(`Identifiable`)의 ID를 식별자로 사용하면 편리합니다. 모델은 반드시 `Hashable` 프로토콜을 준수해야 합니다.
+
+```swift
+// 모델이 Hashable이어야 함 (Int, String ID 등)
+struct Post: Identifiable, Hashable { ... }
+
+// 뷰 구현
+ForEach(posts) { post in
+    PostRowView(post: post)
+        // ✅ 행(Container) 전체에 초점 연결
+        .accessibilityFocused($focus, equals: post.id)
+}
+```
+
+### 주의사항
+컨테이너에 `.accessibilityElement(children: .combine)`을 적용하면 내부의 개별 버튼(좋아요, 상세보기 등)으로 VoiceOver 초점이 이동하지 않을 수 있습니다. 
+만약 내부 버튼도 개별적으로 선택되어야 한다면 `.combine` 대신 `.contain`을 사용하거나, 커스텀 액션(`accessibilityAction`)으로 기능을 구현해야 합니다.
+

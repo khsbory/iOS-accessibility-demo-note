@@ -3,23 +3,54 @@ import SwiftUI
 struct SwiftUIFocusTestView: View {
     let posts: [Post] = PostData.sampleData
     
+    // 1. 상태 변수 정의 (초점용)
+    @State private var lastFocusedID: Int?
+    @AccessibilityFocusState private var focus: Int?
+    
     var body: some View {
         List {
             ForEach(posts) { post in
-                PostRowView(post: post)
+                PostRowView(post: post, lastFocusedID: $lastFocusedID)
                     // 리스트의 기본 선택 스타일 제거를 위해 빈 버튼 스타일 적용
-                    .buttonStyle(PlainButtonStyle()) 
+                    .buttonStyle(PlainButtonStyle())
+                    // 2. 초점 연결: post.id를 기준으로 초점 매핑
+                    .accessibilityFocused($focus, equals: post.id)
             }
         }
         .listStyle(PlainListStyle())
         .navigationTitle("SwiftUI 초점 테스트")
         .navigationBarTitleDisplayMode(.inline)
+        // 3. 화면 복귀 시 초점 복구
+        .onAppear {
+            if let lastID = lastFocusedID {
+                // 1.0초 지연 후 복구
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    focus = lastID
+                }
+            }
+        }
     }
 }
 
 struct PostRowView: View {
     let post: Post
+    // 상위 뷰의 마지막 포커스 ID를 업데이트하기 위한 바인딩
+    @Binding var lastFocusedID: Int?
     @State private var isDetailActive = false
+    
+    // 커스텀 바인딩: 네비게이션이 활성화될 때 ID를 저장
+    private var detailActiveBinding: Binding<Bool> {
+        Binding(
+            get: { isDetailActive },
+            set: { newValue in
+                if newValue {
+                    // 화면 진입 시 ID 저장
+                    lastFocusedID = post.id
+                }
+                isDetailActive = newValue
+            }
+        )
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -43,6 +74,7 @@ struct PostRowView: View {
                 
                 // 화살표 버튼 (이 버튼을 눌러야만 이동)
                 Button(action: {
+                    lastFocusedID = post.id // 버튼 액션으로도 확실하게 ID 저장
                     isDetailActive = true
                 }) {
                     Image(systemName: "chevron.right")
@@ -54,7 +86,7 @@ struct PostRowView: View {
                 .accessibilityHidden(true)
                 // 숨겨진 네비게이션 링크 트리거
                 .background(
-                    NavigationLink(destination: PostDetailView(post: post), isActive: $isDetailActive) {
+                    NavigationLink(destination: PostDetailView(post: post), isActive: detailActiveBinding) {
                         EmptyView()
                     }
                     .hidden()
@@ -94,7 +126,9 @@ struct PostRowView: View {
         .padding(.vertical, 8)
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isButton)
+        // 보이스오버 더블탭 액션
         .accessibilityAction(.default) {
+            lastFocusedID = post.id // 액션 실행 시에도 ID 저장
             isDetailActive = true
         }
     }
