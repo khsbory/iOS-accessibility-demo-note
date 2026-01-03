@@ -50,6 +50,7 @@
 		BB35DFD9AA70D746C73E9852 /* AccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */; };
 		BBBF95BBB4C9E7DE12471835 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F74F05D23C4293178BADC2 /* TitleTableViewCell.swift */; };
 		BDFB1ED8306A537BC933085A /* FocusTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */; };
+		ABCDEF1234567890ABCDEF02 /* AccessibilityElementTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCDEF1234567890ABCDEF01 /* AccessibilityElementTestViewController.swift */; };
 		CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0289D33F107F71F95DC80 /* ExpandableItemCell.swift */; };
 		D446002F5BCB75E8EF31FB2D /* SwiftUIFocusTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E20B26548D7FE68D49634 /* SwiftUIFocusTestView.swift */; };
 		D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CDF4507AC9B3BCFE98BFB /* ContentView.swift */; };
@@ -94,6 +95,7 @@
 		61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
 		634F9F70C1A6CBBFC5111EC7 /* AccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
 		6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTestViewController.swift; sourceTree = "<group>"; };
+		ABCDEF1234567890ABCDEF01 /* AccessibilityElementTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/AccessibilityElementTestViewController.swift; sourceTree = SOURCE_ROOT; };
 		70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
 		76B8A0379B7E678FD71653BF /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
 		77FC046A6AD943927E99FDF1 /* CustomScrollDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */,
 				FCC00EA72AD431C4A47DDEB9 /* ExpandableTabView.swift in Sources */,
 				BDFB1ED8306A537BC933085A /* FocusTestViewController.swift in Sources */,
+				ABCDEF1234567890ABCDEF02 /* AccessibilityElementTestViewController.swift in Sources */,
 				F171D1E57CB2D08B35DEC049 /* FoodCollectionViewCell.swift in Sources */,
 				FDAD547CEF829DF2A7BD6C61 /* FoodItem.swift in Sources */,
 				012B44AD28FF416996E43296 /* HorizontalScrollTableViewCell.swift in Sources */,

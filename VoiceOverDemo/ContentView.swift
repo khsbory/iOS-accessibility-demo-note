@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showUIKitWebView = false
     @State private var showFocusTest = false
+    @State private var showAccessibilityElementTest = false
     @State private var selection: DemoID? // 일반 아이템용 선택 상태
     
     // 포커스 복귀를 위한 상태 변수들
@@ -22,6 +23,7 @@ struct ContentView: View {
         case swiftUIContainerTest
         case swiftUITableViewContainerTest
         case customTabBar
+        case accessibilityElementTest
     }
     
     // 메뉴 아이템 데이터 구조체
@@ -84,7 +86,14 @@ struct ContentView: View {
             DemoItem(id: .customTabBar,
                      title: "커스텀 탭바",
                      color: .indigo,
-                     destination: AnyView(CustomTabBarView()))
+                     destination: AnyView(CustomTabBarView())),
+            DemoItem(id: .accessibilityElementTest,
+                     title: "접근성 엘리먼트 테스트",
+                     color: .brown,
+                     destination: AnyView(
+                        AccessibilityElementTestWrapper(isPresented: $showAccessibilityElementTest)
+                            .modifier(HideNavigationBarModifier())
+                     ))
         ]
     }
     
@@ -95,6 +104,7 @@ struct ContentView: View {
             get: {
                 if item.id == .webViewUIKit { return showUIKitWebView }
                 if item.id == .focusTest { return showFocusTest }
+                if item.id == .accessibilityElementTest { return showAccessibilityElementTest }
                 return selection == item.id
             },
             set: { newValue in
@@ -104,11 +114,13 @@ struct ContentView: View {
                     
                     if item.id == .webViewUIKit { showUIKitWebView = true }
                     else if item.id == .focusTest { showFocusTest = true }
+                    else if item.id == .accessibilityElementTest { showAccessibilityElementTest = true }
                     else { selection = item.id }
                 } else {
                     // 화면 복귀 시점
                     if item.id == .webViewUIKit { showUIKitWebView = false }
                     else if item.id == .focusTest { showFocusTest = false }
+                    else if item.id == .accessibilityElementTest { showAccessibilityElementTest = false }
                     else { selection = nil }
                 }
             }
@@ -220,6 +232,38 @@ struct FocusTestViewControllerWrapper: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: FocusTestViewController, context: Context) {
+        // No update needed
+    }
+
+    class Coordinator {
+        var isPresented: Binding<Bool>
+
+        init(isPresented: Binding<Bool>) {
+            self.isPresented = isPresented
+        }
+
+        func dismiss() {
+            isPresented.wrappedValue = false
+        }
+    }
+}
+
+struct AccessibilityElementTestWrapper: UIViewControllerRepresentable {
+    @Binding var isPresented: Bool
+
+    func makeCoordinator() -> Coordinator {
+        return Coordinator(isPresented: $isPresented)
+    }
+
+    func makeUIViewController(context: Context) -> AccessibilityElementTestViewController {
+        let vc = AccessibilityElementTestViewController()
+        vc.dismissAction = {
+            context.coordinator.dismiss()
+        }
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: AccessibilityElementTestViewController, context: Context) {
         // No update needed
     }
 
