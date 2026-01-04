@@ -3,6 +3,10 @@ import UIKit
 class ProductListCell: UICollectionViewCell {
     static let identifier = "ProductListCell"
     
+    // Callback for Like action
+    var onLikeTapped: (() -> Void)?
+    var isLiked: Bool = false
+    
     // UI Components
     private let productImageView: UIImageView = {
         let iv = UIImageView()
@@ -66,29 +70,31 @@ class ProductListCell: UICollectionViewCell {
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.axis = .horizontal
         sv.spacing = 4
-        sv.alignment = .leading
+        sv.distribution = .fillProportionally
         return sv
     }()
     
-    private let likeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
-        button.tintColor = .systemGray
-        button.backgroundColor = UIColor.white.withAlphaComponent(0.8) // Background for visibility
-        button.layer.cornerRadius = 15 // Circular
-        button.clipsToBounds = true
-        return button
+    private lazy var likeButton: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setImage(UIImage(systemName: "heart"), for: .normal)
+        btn.tintColor = .systemGray
+        btn.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+        return btn
     }()
     
-    // Callback
-    var onLikeTapped: (() -> Void)?
+    // The Container to manage accessibility focus and labels
+    private let mainContainer: OneFocusContainer = {
+        let v = OneFocusContainer()
+        v.translatesAutoresizingMaskIntoConstraints = false
+        // Traits will be .button by default from OneFocusContainer.
+        return v
+    }()
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        
-        self.isAccessibilityElement = false
     }
     
     required init?(coder: NSCoder) {
@@ -96,57 +102,54 @@ class ProductListCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        contentView.backgroundColor = .systemBackground
+        // We add mainContainer to contentView, and all other views to mainContainer
+        contentView.addSubview(mainContainer)
         
-        contentView.addSubview(productImageView)
-        productImageView.addSubview(viewCountLabel) // Overlay
-        
-        contentView.addSubview(likeButton) // Overlay on image
-        
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(originalPriceLabel)
-        contentView.addSubview(discountLabel)
-        contentView.addSubview(priceLabel)
-        contentView.addSubview(tagStackView)
-        
-        likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+        mainContainer.addSubview(productImageView)
+        mainContainer.addSubview(viewCountLabel)
+        mainContainer.addSubview(titleLabel)
+        mainContainer.addSubview(originalPriceLabel)
+        mainContainer.addSubview(discountLabel)
+        mainContainer.addSubview(priceLabel)
+        mainContainer.addSubview(tagStackView)
+        mainContainer.addSubview(likeButton)
         
         NSLayoutConstraint.activate([
-            // Image (Top, Full Width, Aspect Ratio 1:1)
-            productImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            productImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            productImageView.heightAnchor.constraint(equalTo: productImageView.widthAnchor),
+            // Container fills the cell
+            mainContainer.topAnchor.constraint(equalTo: contentView.topAnchor),
+            mainContainer.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            mainContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            mainContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
-            // View Count Overlay (Bottom of Image)
-            viewCountLabel.leadingAnchor.constraint(equalTo: productImageView.leadingAnchor),
-            viewCountLabel.trailingAnchor.constraint(equalTo: productImageView.trailingAnchor),
-            viewCountLabel.bottomAnchor.constraint(equalTo: productImageView.bottomAnchor),
-            viewCountLabel.heightAnchor.constraint(equalToConstant: 20),
+            // Subviews constraints (relative to mainContainer)
+            productImageView.topAnchor.constraint(equalTo: mainContainer.topAnchor),
+            productImageView.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor),
+            productImageView.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor),
+            productImageView.heightAnchor.constraint(equalTo: mainContainer.widthAnchor),
             
-            // Like Button (Top Right of Image)
-            likeButton.topAnchor.constraint(equalTo: productImageView.topAnchor, constant: 8),
-            likeButton.trailingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: -8),
-            likeButton.widthAnchor.constraint(equalToConstant: 30),
-            likeButton.heightAnchor.constraint(equalToConstant: 30),
+            viewCountLabel.bottomAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: -6),
+            viewCountLabel.trailingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: -6),
+            viewCountLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 40),
+            viewCountLabel.heightAnchor.constraint(equalToConstant: 18),
             
-            // Title (Below Image)
-            titleLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: 8),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4),
+            likeButton.topAnchor.constraint(equalTo: mainContainer.topAnchor, constant: 8),
+            likeButton.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -8),
+            likeButton.widthAnchor.constraint(equalToConstant: 24),
+            likeButton.heightAnchor.constraint(equalToConstant: 24),
             
-            // Original Price
-            originalPriceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            originalPriceLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            titleLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: 12),
+            titleLabel.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor, constant: 4),
+            titleLabel.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -4),
             
-            // Discount & Price
-            discountLabel.topAnchor.constraint(equalTo: originalPriceLabel.bottomAnchor, constant: 2),
+            discountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             discountLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             
             priceLabel.centerYAnchor.constraint(equalTo: discountLabel.centerYAnchor),
-            priceLabel.leadingAnchor.constraint(equalTo: discountLabel.trailingAnchor, constant: 6),
+            priceLabel.leadingAnchor.constraint(equalTo: discountLabel.trailingAnchor, constant: 4),
             
-            // Tags
+            originalPriceLabel.centerYAnchor.constraint(equalTo: discountLabel.centerYAnchor),
+            originalPriceLabel.leadingAnchor.constraint(equalTo: priceLabel.trailingAnchor, constant: 4),
+            
             tagStackView.topAnchor.constraint(equalTo: discountLabel.bottomAnchor, constant: 8),
             tagStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             tagStackView.heightAnchor.constraint(equalToConstant: 20)
@@ -155,6 +158,11 @@ class ProductListCell: UICollectionViewCell {
     
     @objc private func likeButtonTapped() {
         onLikeTapped?()
+    }
+    
+    @objc private func accessibilityLikeAction() -> Bool {
+        likeButtonTapped()
+        return true
     }
     
     func configure(with product: Product) {
@@ -198,8 +206,18 @@ class ProductListCell: UICollectionViewCell {
         }
         
         // Like Button
+        self.isLiked = product.isLiked
         let heartImage = product.isLiked ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
         likeButton.setImage(heartImage, for: .normal)
         likeButton.tintColor = product.isLiked ? .systemRed : .systemGray
+        
+        // Custom Actions
+        let actionName = product.isLiked ? "찜하기 취소" : "찜하기"
+        mainContainer.accessibilityCustomActions = [
+            UIAccessibilityCustomAction(name: actionName, target: self, selector: #selector(accessibilityLikeAction))
+        ]
+        
+        // Notify container to update label
+        mainContainer.contentDidChange()
     }
 }
