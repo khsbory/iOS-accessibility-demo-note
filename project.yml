@@ -16,7 +16,6 @@ targets:
       INFOPLIST_FILE: VoiceOverDemo/Info.plist
       CODE_SIGN_STYLE: Automatic
       CODE_SIGN_IDENTITY: "Apple Development"
-      DEVELOPMENT_TEAM: "3D959YCYQR"
     info:
       path: VoiceOverDemo/Info.plist
       properties:

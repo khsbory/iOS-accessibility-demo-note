@@ -12,6 +12,7 @@
 		07807B6791D3E44E80167016 /* FocusTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6026664BC33A5BCE8BD80DC /* FocusTestDemoView.swift */; };
 		08A4FFAB95F8F446635FAEF9 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5C283DDF7907424379308 /* CustomTabBarView.swift */; };
 		08DA6E58D92F3E1A750C6DD6 /* NonAccessibleRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471F021B6E97FA0E21B0009 /* NonAccessibleRadioButtonViewController.swift */; };
+		09D182A9193B644EFA01B88E /* ProductDiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9E4E94C055EAB2478F38F8 /* ProductDiscoveryViewController.swift */; };
 		0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1CDFDC333107C521706FA /* NonAccessibleTitleCell.swift */; };
 		1F1166E9BC386A8AAA1C546C /* NonAccessibleSwiftUIContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10958F3EE1D1563AB9AD88 /* NonAccessibleSwiftUIContainerDemoView.swift */; };
 		1FC38CAC7AEA14A327F06BBF /* ContainerTestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8EF18F5E62E96B4ADBD64 /* ContainerTestDataModel.swift */; };
@@ -27,6 +28,7 @@
 		515C78E619F9FBF6CDCEADDE /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8E3428289C4758531BF95E /* CustomTabBarViewController.swift */; };
 		544A5E46174298EC6B747E92 /* AccessibleSeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39ED434C00566D60543D7E03 /* AccessibleSeasonCollectionViewCell.swift */; };
 		54C99E5164C3FD51A9F42841 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62269E01979FE9C0C0B1AE /* WebViewController.swift */; };
+		5C86FF3A3466C12541F8D8D4 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201A1A1074BD20187CC8F12 /* ProductListCell.swift */; };
 		5F1D04D97C77B0C2E98CCB2A /* AccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */; };
 		6129AB56E526024BE9E9DCC5 /* NonAccessibleContainerTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */; };
 		61AD7A7A1D7371C8161D603F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 790FBACAE286B0A51B787C61 /* Localizable.strings */; };
@@ -87,6 +89,7 @@
 		36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewContainerCell.swift; sourceTree = "<group>"; };
 		39ED434C00566D60543D7E03 /* AccessibleSeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSeasonCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A56BDD085678191F98A0F77 /* NonAccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleDemoView.swift; sourceTree = "<group>"; };
+		3E9E4E94C055EAB2478F38F8 /* ProductDiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDiscoveryViewController.swift; sourceTree = "<group>"; };
 		3FEBC9AF2AB9214AAF1A1B0D /* NonAccessibleFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleFoodCell.swift; sourceTree = "<group>"; };
 		421879DC443AAB32B7EF2CC5 /* NonAccessibleHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleHorizontalCell.swift; sourceTree = "<group>"; };
 		4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 		AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
 		B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
 		B1D037EA748DB85E7D77240B /* AccessibleSwiftUIContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUIContainerDemoView.swift; sourceTree = "<group>"; };
+		B201A1A1074BD20187CC8F12 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 		B8028A4356EA2E20F3EE947A /* AccessibilityElementTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityElementTestViewController.swift; sourceTree = "<group>"; };
 		BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollTableViewCell.swift; sourceTree = "<group>"; };
 		BDF05D3FEEE77B92503CFBD9 /* AccessibleCollectionViewContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleCollectionViewContainerCell.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 				4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */,
 				341790690DCB47AA4DDDABC4 /* Info.plist */,
 				AB73F083C42D48618C066FAA /* PostData.swift */,
+				3E9E4E94C055EAB2478F38F8 /* ProductDiscoveryViewController.swift */,
+				B201A1A1074BD20187CC8F12 /* ProductListCell.swift */,
 				95D4843630872C3DBAEFCCD3 /* RadioButtonTabView.swift */,
 				A2742D1E974214D53F5B4C81 /* SwiftUIContainerTestTabView.swift */,
 				CF4E20B26548D7FE68D49634 /* SwiftUIFocusTestView.swift */,
@@ -374,6 +380,8 @@
 				0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */,
 				8488E6F334724456F91CA25C /* NonAccessibleViewController.swift in Sources */,
 				053072F271D9AE284AB0CDFF /* PostData.swift in Sources */,
+				09D182A9193B644EFA01B88E /* ProductDiscoveryViewController.swift in Sources */,
+				5C86FF3A3466C12541F8D8D4 /* ProductListCell.swift in Sources */,
 				77966C57DEBCD8958DA1AAA5 /* RadioButtonDemoViewController.swift in Sources */,
 				33F812453E4A115C2D8C64C6 /* RadioButtonTabView.swift in Sources */,
 				78728711C8147C9CA3CFF26C /* SeasonCollectionViewCell.swift in Sources */,

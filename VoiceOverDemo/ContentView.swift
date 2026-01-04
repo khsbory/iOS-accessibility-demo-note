@@ -24,6 +24,7 @@ struct ContentView: View {
         case swiftUITableViewContainerTest
         case customTabBar
         case accessibilityElementTest
+        case productDiscovery
     }
     
     // 메뉴 아이템 데이터 구조체
@@ -93,7 +94,12 @@ struct ContentView: View {
                      destination: AnyView(
                         AccessibilityElementTestWrapper(isPresented: $showAccessibilityElementTest)
                             .modifier(HideNavigationBarModifier())
-                     ))
+                     )),
+            DemoItem(id: .productDiscovery,
+                     title: "상품 탐색하기",
+                     color: .gray,
+                     destination: AnyView(ProductDiscoveryWrapper()
+                        .navigationTitle("상품 탐색하기")))
         ]
     }
     
@@ -277,6 +283,16 @@ struct AccessibilityElementTestWrapper: UIViewControllerRepresentable {
         func dismiss() {
             isPresented.wrappedValue = false
         }
+    }
+}
+
+struct ProductDiscoveryWrapper: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> ProductDiscoveryViewController {
+        return ProductDiscoveryViewController()
+    }
+
+    func updateUIViewController(_ uiViewController: ProductDiscoveryViewController, context: Context) {
+        // No update needed
     }
 }
 
