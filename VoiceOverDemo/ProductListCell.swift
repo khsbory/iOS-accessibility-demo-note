@@ -185,6 +185,17 @@ class ProductListCell: UICollectionViewCell {
         
         priceLabel.text = product.price
         
+        // Accessibility Label Configuration
+        var priceA11yLabel = ""
+        if let original = product.originalPrice {
+            priceA11yLabel += "정상가 \(original), "
+        }
+        if let discount = product.discountRate {
+            priceA11yLabel += "할인율 \(discount), "
+        }
+        priceA11yLabel += "판매가 \(product.price)"
+        priceLabel.accessibilityLabel = priceA11yLabel
+        
         if let count = product.viewingCount {
             viewCountLabel.text = count
             viewCountLabel.isHidden = false

@@ -41,6 +41,7 @@
 		82453852E2449CB0228D6B75 /* NonAccessibleHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421879DC443AAB32B7EF2CC5 /* NonAccessibleHorizontalCell.swift */; };
 		8488E6F334724456F91CA25C /* NonAccessibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A837DA8084F73997C9195 /* NonAccessibleViewController.swift */; };
 		8736F563C9EDA54FD3BCB590 /* NonAccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92835386EF7912B68522539E /* NonAccessibleRadioButtonDemoView.swift */; };
+		8E9ABA5AD612D8A49F334228 /* OneFocusContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA194A127741B9F865872C53 /* OneFocusContainer.swift */; };
 		94A6665CD7732717DC5560B9 /* SwiftUIContainerTestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2742D1E974214D53F5B4C81 /* SwiftUIContainerTestTabView.swift */; };
 		997FAAB418E5B2523F8AE4AC /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CE0750EFFBE96A138E397 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */; };
 		A3FAAD9F207314F0DBBF83C9 /* CollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */; };
@@ -137,6 +138,7 @@
 		E1B1B942A91892F110917186 /* AccessibleExpandableItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleExpandableItemCell.swift; sourceTree = "<group>"; };
 		E2756E0BF89768F82F9B810B /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8832C20166D52CD1C3FA16F /* NonAccessibleExpandableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleExpandableViewController.swift; sourceTree = "<group>"; };
+		EA194A127741B9F865872C53 /* OneFocusContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneFocusContainer.swift; sourceTree = "<group>"; };
 		EDD68E1D4CCDCB6F01640AFF /* RadioButtonDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDemoViewController.swift; sourceTree = "<group>"; };
 		EEBFC7E5CD5215244CD54585 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		F214C0FB2FFCBF1A33CE7130 /* NonAccessibleExpandableDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleExpandableDemoView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */,
 				4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */,
 				341790690DCB47AA4DDDABC4 /* Info.plist */,
+				EA194A127741B9F865872C53 /* OneFocusContainer.swift */,
 				AB73F083C42D48618C066FAA /* PostData.swift */,
 				3E9E4E94C055EAB2478F38F8 /* ProductDiscoveryViewController.swift */,
 				B201A1A1074BD20187CC8F12 /* ProductListCell.swift */,
@@ -379,6 +382,7 @@
 				997FAAB418E5B2523F8AE4AC /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */,
 				0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */,
 				8488E6F334724456F91CA25C /* NonAccessibleViewController.swift in Sources */,
+				8E9ABA5AD612D8A49F334228 /* OneFocusContainer.swift in Sources */,
 				053072F271D9AE284AB0CDFF /* PostData.swift in Sources */,
 				09D182A9193B644EFA01B88E /* ProductDiscoveryViewController.swift in Sources */,
 				5C86FF3A3466C12541F8D8D4 /* ProductListCell.swift in Sources */,
