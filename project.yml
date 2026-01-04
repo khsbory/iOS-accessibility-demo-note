@@ -16,6 +16,7 @@ targets:
       INFOPLIST_FILE: VoiceOverDemo/Info.plist
       CODE_SIGN_STYLE: Automatic
       CODE_SIGN_IDENTITY: "Apple Development"
+      DEVELOPMENT_TEAM: CT8CT953JS
     info:
       path: VoiceOverDemo/Info.plist
       properties:
@@ -42,3 +43,17 @@ targets:
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
+
+schemes:
+  VoiceOverDemo:
+    build:
+      targets:
+        VoiceOverDemo: all
+    run:
+      config: Debug
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
