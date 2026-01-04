@@ -183,9 +183,10 @@ class AccessibilityElementTestViewController: UIViewController, UITableViewDataS
             if targetSection < self.sections.count, indexPath.row < self.sections[targetSection].items.count {
                 tableView.scrollToRow(at: targetIndexPath, at: .none, animated: true)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    if let targetCell = tableView.cellForRow(at: targetIndexPath) {
-                        UIAccessibility.post(notification: .layoutChanged, argument: targetCell)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                    if let targetCell = tableView.cellForRow(at: targetIndexPath) as? RichSeatCell {
+                        // 변경: 셀 자체가 아닌 containerView로 포커스 이동
+                        UIAccessibility.post(notification: .layoutChanged, argument: targetCell.containerView)
                     }
                 }
             }
@@ -207,8 +208,8 @@ class RichSeatCell: UITableViewCell {
     var likeAction: (() -> Void)?
     var seatSelectAction: (() -> Void)? // 좌석 선택 액션
     
-    // 컨테이너 뷰
-    private let containerView: UIView = {
+    // 컨테이너 뷰 (접근성 포커스 이동을 위해 internal로 변경)
+    let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .secondarySystemGroupedBackground
@@ -222,18 +223,23 @@ class RichSeatCell: UITableViewCell {
         return view
     }()
     
-    // 찜하기 뷰 (텍스트 라벨로 교체)
-    private lazy var likeLabel: UILabel = {
+    // 찜하기 컨테이너 뷰
+    private let likeContainerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        view.isUserInteractionEnabled = true
+        return view
+    }()
+
+    // 찜하기 뷰 (텍스트 라벨)
+    private let likeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 14, weight: .semibold)
         label.textColor = .systemRed
         label.textAlignment = .center
-        label.isUserInteractionEnabled = true // 터치 가능하도록 설정
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleLikeTap))
-        label.addGestureRecognizer(tap)
-        
+        label.isUserInteractionEnabled = false // 컨테이너가 제스처 처리
         return label
     }()
     
@@ -293,7 +299,11 @@ class RichSeatCell: UITableViewCell {
         selectionStyle = .none
         
         contentView.addSubview(containerView)
-        containerView.addSubview(likeLabel)
+        
+        // 계층 구조 변경: likeLabel을 likeContainerView에 넣음
+        containerView.addSubview(likeContainerView)
+        likeContainerView.addSubview(likeLabel)
+        
         containerView.addSubview(statusBadge)
         
         let textStack = UIStackView(arrangedSubviews: [descriptionLabel, seatNumberLabel])
@@ -308,6 +318,10 @@ class RichSeatCell: UITableViewCell {
         containerView.addGestureRecognizer(containerTap)
         containerView.isUserInteractionEnabled = true
         
+        // 찜하기 제스처를 likeContainerView에 추가
+        let likeTap = UITapGestureRecognizer(target: self, action: #selector(handleLikeTap))
+        likeContainerView.addGestureRecognizer(likeTap)
+        
         // 접근성 설정 (버튼 트레이트 제거됨)
         
         NSLayoutConstraint.activate([
@@ -316,12 +330,17 @@ class RichSeatCell: UITableViewCell {
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
-            likeLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-            likeLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            likeLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 60),
-            likeLabel.heightAnchor.constraint(equalToConstant: 30),
+            // Like Container Constraints
+            likeContainerView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
+            likeContainerView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            likeContainerView.widthAnchor.constraint(greaterThanOrEqualToConstant: 80),
+            likeContainerView.heightAnchor.constraint(equalToConstant: 44),
             
-            textStack.leadingAnchor.constraint(equalTo: likeLabel.trailingAnchor, constant: 12),
+            // Like Label Constraints (Center in Container)
+            likeLabel.centerXAnchor.constraint(equalTo: likeContainerView.centerXAnchor),
+            likeLabel.centerYAnchor.constraint(equalTo: likeContainerView.centerYAnchor),
+            
+            textStack.leadingAnchor.constraint(equalTo: likeContainerView.trailingAnchor, constant: 8),
             textStack.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             textStack.topAnchor.constraint(greaterThanOrEqualTo: containerView.topAnchor, constant: 16),
             textStack.bottomAnchor.constraint(lessThanOrEqualTo: containerView.bottomAnchor, constant: -16),
@@ -340,25 +359,46 @@ class RichSeatCell: UITableViewCell {
         // 찜 상태에 따라 텍스트 변경
         likeLabel.text = item.isLiked ? "찜하기 취소" : "찜하기"
         
-        // 접근성 설정 (버튼 트레이트 추가)
-        self.accessibilityTraits = .button
-        self.accessibilityLabel = nil
+        // 찜 상태에 따라 텍스트 변경
+        likeLabel.text = item.isLiked ? "찜하기 취소" : "찜하기"
+        
+        // 찜 상태에 따라 텍스트 변경
+        likeLabel.text = item.isLiked ? "찜하기 취소" : "찜하기"
+        
+        // 1. 찜하기 요소 버튼 트레이트 추가
+        likeLabel.accessibilityTraits = .button
+        
+        // 2. 좌석 정보 버튼 설정
+        containerView.accessibilityTraits = .none
+        
+        var seatAccessibilityLabel = "\(item.description), \(item.seatNumber)"
         
         if item.isAvailable {
             statusBadge.text = "예매 가능"
             statusBadge.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.15)
             statusBadge.textColor = .systemBlue
-            statusBadge.accessibilityLabel = nil
+            statusBadge.accessibilityLabel = "예매 가능"
+            seatAccessibilityLabel += ", 예매 가능"
+            
             containerView.layer.borderColor = UIColor.systemBlue.withAlphaComponent(0.3).cgColor
             seatNumberLabel.textColor = .label
         } else {
             statusBadge.text = "매진"
             statusBadge.backgroundColor = UIColor.systemGray.withAlphaComponent(0.2)
             statusBadge.textColor = .systemGray
-            statusBadge.accessibilityLabel = "안타깝게도 매진"
+            statusBadge.accessibilityLabel = "매진"
+            seatAccessibilityLabel += ", 안타깝게도 매진"
+            
             containerView.layer.borderColor = UIColor.systemGray.withAlphaComponent(0.2).cgColor
             seatNumberLabel.textColor = .secondaryLabel
         }
+        
+        // 3. 부모 셀 설정: 버튼 트레이트 유지, 명시적 라벨 제거, 엘리먼트 설정 삭제(기본값 사용)
+        self.accessibilityTraits = .button
+        self.accessibilityLabel = nil 
+        
+        // 4. 접근성 요소 순서 지정 제거
+        self.accessibilityElements = nil
     }
     
     @objc private func handleLikeTap() {

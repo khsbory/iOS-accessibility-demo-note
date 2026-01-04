@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		012B44AD28FF416996E43296 /* HorizontalScrollTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */; };
 		053072F271D9AE284AB0CDFF /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73F083C42D48618C066FAA /* PostData.swift */; };
+		07807B6791D3E44E80167016 /* FocusTestDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6026664BC33A5BCE8BD80DC /* FocusTestDemoView.swift */; };
 		08A4FFAB95F8F446635FAEF9 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5C283DDF7907424379308 /* CustomTabBarView.swift */; };
 		08DA6E58D92F3E1A750C6DD6 /* NonAccessibleRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471F021B6E97FA0E21B0009 /* NonAccessibleRadioButtonViewController.swift */; };
 		0F8F97D2DD420BE0F1D6E8F1 /* NonAccessibleTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1CDFDC333107C521706FA /* NonAccessibleTitleCell.swift */; };
@@ -42,6 +43,7 @@
 		997FAAB418E5B2523F8AE4AC /* NonAccessibleSwiftUITableViewContainerDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CE0750EFFBE96A138E397 /* NonAccessibleSwiftUITableViewContainerDemoView.swift */; };
 		A3FAAD9F207314F0DBBF83C9 /* CollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8C3F9F4AC7C48DF9C21A7 /* CollectionViewContainerCell.swift */; };
 		A8A6CCBB425F4BF22FAD5D4C /* AccessibleContainerTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */; };
+		ABBA6209CA4E905576D92782 /* AccessibilityElementTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8028A4356EA2E20F3EE947A /* AccessibilityElementTestViewController.swift */; };
 		AC84E95789ED02A7FE6EDA1E /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8286B99CA942C83B96CC3D /* CategoryHeaderView.swift */; };
 		ACA93ADD4CBA8C2A008DFC98 /* DemoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B8A0379B7E678FD71653BF /* DemoTabView.swift */; };
 		AEC0EF13F6A26B5D02672574 /* AccessibleCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86F9E375B155B8A1CCD4088 /* AccessibleCategoryTableViewCell.swift */; };
@@ -50,7 +52,6 @@
 		BB35DFD9AA70D746C73E9852 /* AccessibleRadioButtonDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */; };
 		BBBF95BBB4C9E7DE12471835 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F74F05D23C4293178BADC2 /* TitleTableViewCell.swift */; };
 		BDFB1ED8306A537BC933085A /* FocusTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */; };
-		ABCDEF1234567890ABCDEF02 /* AccessibilityElementTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCDEF1234567890ABCDEF01 /* AccessibilityElementTestViewController.swift */; };
 		CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F0289D33F107F71F95DC80 /* ExpandableItemCell.swift */; };
 		D446002F5BCB75E8EF31FB2D /* SwiftUIFocusTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E20B26548D7FE68D49634 /* SwiftUIFocusTestView.swift */; };
 		D81DF842A986F69FE5E3A69A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CDF4507AC9B3BCFE98BFB /* ContentView.swift */; };
@@ -95,7 +96,6 @@
 		61B7DC0131E870C12BF8C1E0 /* AccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
 		634F9F70C1A6CBBFC5111EC7 /* AccessibleSwiftUITableViewContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUITableViewContainerDemoView.swift; sourceTree = "<group>"; };
 		6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTestViewController.swift; sourceTree = "<group>"; };
-		ABCDEF1234567890ABCDEF01 /* AccessibilityElementTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOverDemo/AccessibilityElementTestViewController.swift; sourceTree = SOURCE_ROOT; };
 		70D5D4E9DD848300485278C2 /* AccessibleRadioButtonDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleRadioButtonDemoView.swift; sourceTree = "<group>"; };
 		76B8A0379B7E678FD71653BF /* DemoTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTabView.swift; sourceTree = "<group>"; };
 		77FC046A6AD943927E99FDF1 /* CustomScrollDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollDemoViewController.swift; sourceTree = "<group>"; };
@@ -118,9 +118,11 @@
 		AF5264CC4555AB0DB0FDA9B6 /* NonAccessibleContainerTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAccessibleContainerTestDemoView.swift; sourceTree = "<group>"; };
 		B100DA82D3BFCA6B053B9ABE /* AccessibleContainerTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContainerTestViewController.swift; sourceTree = "<group>"; };
 		B1D037EA748DB85E7D77240B /* AccessibleSwiftUIContainerDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleSwiftUIContainerDemoView.swift; sourceTree = "<group>"; };
+		B8028A4356EA2E20F3EE947A /* AccessibilityElementTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityElementTestViewController.swift; sourceTree = "<group>"; };
 		BB45FEF755BBD5CB3070C873 /* HorizontalScrollTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollTableViewCell.swift; sourceTree = "<group>"; };
 		BDF05D3FEEE77B92503CFBD9 /* AccessibleCollectionViewContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleCollectionViewContainerCell.swift; sourceTree = "<group>"; };
 		BECC85AE0610F315F166E8B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6026664BC33A5BCE8BD80DC /* FocusTestDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTestDemoView.swift; sourceTree = "<group>"; };
 		CA3A803710E5E5B0160B6748 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC51C4221BB45DFF13797AFD /* AccessibleDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleDemoView.swift; sourceTree = "<group>"; };
 		CF4E20B26548D7FE68D49634 /* SwiftUIFocusTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFocusTestView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		A28FEFB9BB394727B0AE916A /* VoiceOverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B8028A4356EA2E20F3EE947A /* AccessibilityElementTestViewController.swift */,
 				CA3A803710E5E5B0160B6748 /* Assets.xcassets */,
 				A0A8EF18F5E62E96B4ADBD64 /* ContainerTestDataModel.swift */,
 				222985CBF8090B41EABE5554 /* ContainerTestTabView.swift */,
@@ -161,6 +164,7 @@
 				76B8A0379B7E678FD71653BF /* DemoTabView.swift */,
 				9BBD474B8A0CF2E6262AF9C4 /* ExpandableDataModel.swift */,
 				2836533DE5DEE7C6B0711198 /* ExpandableTabView.swift */,
+				C6026664BC33A5BCE8BD80DC /* FocusTestDemoView.swift */,
 				6E9A6CB5DEE8D182C4B84D2A /* FocusTestViewController.swift */,
 				4A9F4349955C77DBF7EC3A25 /* FoodItem.swift */,
 				341790690DCB47AA4DDDABC4 /* Info.plist */,
@@ -279,6 +283,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					06745594AC0636354E01F25C = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 20B6A9B8E0C10163483CF9A1 /* Build configuration list for PBXProject "VoiceOverDemo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -317,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBA6209CA4E905576D92782 /* AccessibilityElementTestViewController.swift in Sources */,
 				DC1CB7F5EF854A3E9E41C36C /* AccessibleCategoryHeaderView.swift in Sources */,
 				AEC0EF13F6A26B5D02672574 /* AccessibleCategoryTableViewCell.swift in Sources */,
 				F0DB0E20A3638DB824889990 /* AccessibleCollectionViewContainerCell.swift in Sources */,
@@ -345,8 +355,8 @@
 				DD10319C8E9CD25B0557CD8F /* ExpandableHeaderCell.swift in Sources */,
 				CE9B51514FF7E158B1094743 /* ExpandableItemCell.swift in Sources */,
 				FCC00EA72AD431C4A47DDEB9 /* ExpandableTabView.swift in Sources */,
+				07807B6791D3E44E80167016 /* FocusTestDemoView.swift in Sources */,
 				BDFB1ED8306A537BC933085A /* FocusTestViewController.swift in Sources */,
-				ABCDEF1234567890ABCDEF02 /* AccessibilityElementTestViewController.swift in Sources */,
 				F171D1E57CB2D08B35DEC049 /* FoodCollectionViewCell.swift in Sources */,
 				FDAD547CEF829DF2A7BD6C61 /* FoodItem.swift in Sources */,
 				012B44AD28FF416996E43296 /* HorizontalScrollTableViewCell.swift in Sources */,
@@ -463,7 +473,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT8CT953JS;
 				INFOPLIST_FILE = VoiceOverDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -543,7 +554,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CT8CT953JS;
 				INFOPLIST_FILE = VoiceOverDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
