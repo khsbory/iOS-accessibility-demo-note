@@ -163,12 +163,30 @@ final class OneFocusContainer: UIView {
             return a.0.x < b.0.x
         }
         
-        // 공백 정리 + 중복 제거
-        var seen = Set<String>()
-        let parts = bag.map { normalizeSpaces($0.1) }
-            .filter { !$0.isEmpty && seen.insert($0).inserted }
+        // 1. 텍스트 추출 및 정제
+        let rawTexts = bag.map { normalizeSpaces($0.1) }
+            .filter { !$0.isEmpty }
         
-        return parts.joined(separator: separator)
+        // 2. 포함 관계 기반 중복 제거 (Dedup Logic Upgrade)
+        // "50,000"이 "가격 50,000"에 포함되면 제거
+        var uniqueTexts: [String] = []
+        
+        for text in rawTexts {
+            // 현재 텍스트가 다른 텍스트에 포함되어 있는지 검사 (자신은 제외)
+            let isContained = rawTexts.contains { other in
+                return other != text && other.contains(text)
+            }
+            
+            // 어디에도 포함되지 않는 '고유한' 정보이거나 가장 긴 정보라면 추가
+            if !isContained {
+                // 완전히 동일한 중복이 있을 수 있으므로 한 번 더 체크
+                if !uniqueTexts.contains(text) {
+                    uniqueTexts.append(text)
+                }
+            }
+        }
+        
+        return uniqueTexts.joined(separator: separator)
     }
     
     /// 개별 뷰에서 접근성 텍스트 추출(우선순위 일관)
