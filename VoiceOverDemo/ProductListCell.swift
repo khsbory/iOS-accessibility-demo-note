@@ -228,6 +228,10 @@ class ProductListCell: UICollectionViewCell {
             UIAccessibilityCustomAction(name: actionName, target: self, selector: #selector(accessibilityLikeAction))
         ]
         
+        // Ignore specific views from OneFocusContainer
+        productImageView.accessibilityIdentifier = "a11y-ignore"
+        likeButton.accessibilityIdentifier = "a11y-ignore"
+        
         // Notify container to update label
         mainContainer.contentDidChange()
     }
