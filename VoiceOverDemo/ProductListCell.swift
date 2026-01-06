@@ -115,10 +115,10 @@ class ProductListCell: UICollectionViewCell {
     }()
     
     // The Container to manage accessibility focus and labels
-    private let mainContainer: OneFocusContainer = {
-        let v = OneFocusContainer()
+    private let mainContainer: MergedFocus = {
+        let v = MergedFocus()
         v.translatesAutoresizingMaskIntoConstraints = false
-        // Traits will be .button by default from OneFocusContainer.
+        // Traits will be .button by default from MergedFocus.
         return v
     }()
     
@@ -239,7 +239,7 @@ class ProductListCell: UICollectionViewCell {
         ratingLabel.text = "\(product.rating)"
         reviewLabel.text = "(\(product.reviewCount))"
         
-        // Accessibility Label Configuration for individual views (OneFocusContainer will aggregate these)
+        // Accessibility Label Configuration for individual views (MergedFocus will aggregate these)
         storeNameLabel.accessibilityLabel = product.storeName
         titleLabel.accessibilityLabel = product.name
         
@@ -299,7 +299,7 @@ class ProductListCell: UICollectionViewCell {
             UIAccessibilityCustomAction(name: actionName, target: self, selector: #selector(accessibilityLikeAction))
         ]
         
-        // Ignore specific views from OneFocusContainer
+        // Ignore specific views from MergedFocus
         productImageView.accessibilityIdentifier = "a11y-ignore"
         likeButton.accessibilityIdentifier = "a11y-ignore"
         

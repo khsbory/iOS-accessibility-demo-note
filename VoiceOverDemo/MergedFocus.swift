@@ -4,7 +4,7 @@ import UIKit
 /// 하위 자식들의 텍스트/레이블을 자동 집계하여 상위 accessibilityLabel에 넣는 컨테이너.
 /// - 접근성 Traits 기본값: .button
 /// - 범용 유틸(집계/시그니처) 포함
-final class OneFocusContainer: UIView {
+final class MergedFocus: UIView {
     
     // MARK: - Tunables (팀 컨벤션에 맞춰 조정)
     private let throttleInterval: CFTimeInterval = 0.10
@@ -212,7 +212,7 @@ final class OneFocusContainer: UIView {
     // MARK: - (선택) 디버깅 도구
     #if DEBUG
     func debugAccessibilityInfo() {
-        print("=== OneFocusContainer Debug ===")
+        print("=== MergedFocus Debug ===")
         print("Cached Label: \(cachedLabel)")
         let live = Self.aggregateA11yText(in: self, separator: separator, ignoreMarker: ignoreMarker, minAlpha: minAlphaVisible)
         print("Live Label: \(live)")
