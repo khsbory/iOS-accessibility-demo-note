@@ -25,6 +25,7 @@ struct ContentView: View {
         case customTabBar
         case accessibilityElementTest
         case productDiscovery
+        case swiftUIProductDiscovery
     }
     
     // 메뉴 아이템 데이터 구조체
@@ -99,7 +100,11 @@ struct ContentView: View {
                      title: "상품 탐색하기",
                      color: .gray,
                      destination: AnyView(ProductDiscoveryWrapper()
-                        .navigationTitle("상품 탐색하기")))
+                        .navigationTitle("상품 탐색하기"))),
+            DemoItem(id: .swiftUIProductDiscovery,
+                     title: "상품 탐색하기 (SwiftUI)",
+                     color: .orange,
+                     destination: AnyView(SwiftUIProductDiscoveryView()))
         ]
     }
     
