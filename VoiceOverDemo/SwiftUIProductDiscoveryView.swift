@@ -66,7 +66,7 @@ struct SwiftUIProductListCell: View {
                 
                 // 찜하기 버튼
                 Button(action: {
-                    product.isLiked.toggle()
+                    toggleLike()
                 }) {
                     Image(systemName: product.isLiked ? "heart.fill" : "heart")
                         .foregroundColor(product.isLiked ? .red : .gray)
@@ -135,10 +135,49 @@ struct SwiftUIProductListCell: View {
             .padding(.top, 8)
             .padding(.horizontal, 4)
         }
+        .contentShape(Rectangle()) // 클릭 영역을 전체로 확장
+        .onTapGesture {
+            selectProduct()
+        }
     }
     
     private func isGreenTag(_ tag: String) -> Bool {
         return tag == "도착보장" || tag == "N Pay"
+    }
+    
+    private func toggleLike() {
+        product.isLiked.toggle()
+        let message = product.isLiked ? "관심상품에 추가되었습니다." : "관심상품에서 삭제되었습니다."
+        showToast(message: message)
+    }
+    
+    private func selectProduct() {
+        let message = "\(product.name) 상품을 선택했습니다."
+        showToast(message: message)
+    }
+    
+    private func showToast(message: String) {
+        if let topVC = UIApplication.shared.topViewController() {
+            ToastView.show(message: message, in: topVC)
+        }
+    }
+}
+
+// UIKit의 ToastView를 호출하기 위한 Top ViewController 탐색 유틸리티
+extension UIApplication {
+    func topViewController(controller: UIViewController? = UIApplication.shared.windows.first?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return topViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
     }
 }
 
