@@ -32,6 +32,14 @@ class ProductListCell: UICollectionViewCell {
         return label
     }()
     
+    private let storeNameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 12, weight: .medium)
+        label.textColor = .systemGray
+        return label
+    }()
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -52,16 +60,39 @@ class ProductListCell: UICollectionViewCell {
     private let discountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 15, weight: .bold)
-        label.textColor = .systemRed
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.textColor = UIColor(red: 3/255, green: 199/255, blue: 90/255, alpha: 1) // Naver Green
         return label
     }()
     
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 15, weight: .bold)
+        label.font = .systemFont(ofSize: 16, weight: .bold)
         label.textColor = .label
+        return label
+    }()
+    
+    private let ratingStackView: UIStackView = {
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = .horizontal
+        sv.spacing = 2
+        sv.alignment = .center
+        return sv
+    }()
+    
+    private let ratingLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12, weight: .medium)
+        label.textColor = .label
+        return label
+    }()
+    
+    private let reviewLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12, weight: .regular)
+        label.textColor = .systemGray
         return label
     }()
     
@@ -107,12 +138,24 @@ class ProductListCell: UICollectionViewCell {
         
         mainContainer.addSubview(productImageView)
         mainContainer.addSubview(viewCountLabel)
+        mainContainer.addSubview(storeNameLabel)
         mainContainer.addSubview(titleLabel)
         mainContainer.addSubview(originalPriceLabel)
         mainContainer.addSubview(discountLabel)
         mainContainer.addSubview(priceLabel)
         mainContainer.addSubview(tagStackView)
+        mainContainer.addSubview(ratingStackView)
         mainContainer.addSubview(likeButton)
+        
+        let starIcon = UIImageView(image: UIImage(systemName: "star.fill"))
+        starIcon.tintColor = .systemOrange
+        starIcon.translatesAutoresizingMaskIntoConstraints = false
+        starIcon.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        starIcon.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        
+        ratingStackView.addArrangedSubview(starIcon)
+        ratingStackView.addArrangedSubview(ratingLabel)
+        ratingStackView.addArrangedSubview(reviewLabel)
         
         NSLayoutConstraint.activate([
             // Container fills the cell
@@ -137,7 +180,11 @@ class ProductListCell: UICollectionViewCell {
             likeButton.widthAnchor.constraint(equalToConstant: 24),
             likeButton.heightAnchor.constraint(equalToConstant: 24),
             
-            titleLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: 12),
+            storeNameLabel.topAnchor.constraint(equalTo: productImageView.bottomAnchor, constant: 8),
+            storeNameLabel.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor, constant: 4),
+            storeNameLabel.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -4),
+            
+            titleLabel.topAnchor.constraint(equalTo: storeNameLabel.bottomAnchor, constant: 4),
             titleLabel.leadingAnchor.constraint(equalTo: mainContainer.leadingAnchor, constant: 4),
             titleLabel.trailingAnchor.constraint(equalTo: mainContainer.trailingAnchor, constant: -4),
             
@@ -147,12 +194,15 @@ class ProductListCell: UICollectionViewCell {
             priceLabel.centerYAnchor.constraint(equalTo: discountLabel.centerYAnchor),
             priceLabel.leadingAnchor.constraint(equalTo: discountLabel.trailingAnchor, constant: 4),
             
-            originalPriceLabel.centerYAnchor.constraint(equalTo: discountLabel.centerYAnchor),
-            originalPriceLabel.leadingAnchor.constraint(equalTo: priceLabel.trailingAnchor, constant: 4),
+            originalPriceLabel.topAnchor.constraint(equalTo: discountLabel.bottomAnchor, constant: 2),
+            originalPriceLabel.leadingAnchor.constraint(equalTo: discountLabel.leadingAnchor),
             
-            tagStackView.topAnchor.constraint(equalTo: discountLabel.bottomAnchor, constant: 8),
+            ratingStackView.topAnchor.constraint(equalTo: originalPriceLabel.bottomAnchor, constant: 4),
+            ratingStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            
+            tagStackView.topAnchor.constraint(equalTo: ratingStackView.bottomAnchor, constant: 6),
             tagStackView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            tagStackView.heightAnchor.constraint(equalToConstant: 20)
+            tagStackView.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
     
@@ -166,6 +216,7 @@ class ProductListCell: UICollectionViewCell {
     }
     
     func configure(with product: Product) {
+        storeNameLabel.text = product.storeName
         titleLabel.text = product.name
         
         // Original Price Strikethrough
@@ -185,22 +236,37 @@ class ProductListCell: UICollectionViewCell {
         
         priceLabel.text = product.price
         
-        // Accessibility Label Configuration
-        var priceA11yLabel = ""
-        if let original = product.originalPrice {
-            priceA11yLabel += "정상가 \(original), "
-        }
+        ratingLabel.text = "\(product.rating)"
+        reviewLabel.text = "(\(product.reviewCount))"
+        
+        // Accessibility Label Configuration for individual views (OneFocusContainer will aggregate these)
+        storeNameLabel.accessibilityLabel = product.storeName
+        titleLabel.accessibilityLabel = product.name
+        
         if let discount = product.discountRate {
-            priceA11yLabel += "할인율 \(discount), "
+            discountLabel.accessibilityLabel = "할인율 \(discount)"
+        } else {
+            discountLabel.accessibilityLabel = nil
         }
-        priceA11yLabel += "판매가 \(product.price)"
-        priceLabel.accessibilityLabel = priceA11yLabel
+        
+        priceLabel.accessibilityLabel = "판매가 \(product.price)"
+        
+        if let original = product.originalPrice {
+            originalPriceLabel.accessibilityLabel = "정상가 \(original)"
+        } else {
+            originalPriceLabel.accessibilityLabel = nil
+        }
+        
+        ratingLabel.accessibilityLabel = "평점 \(product.rating)점"
+        reviewLabel.accessibilityLabel = "리뷰 \(product.reviewCount)개"
         
         if let count = product.viewingCount {
             viewCountLabel.text = count
             viewCountLabel.isHidden = false
+            viewCountLabel.accessibilityLabel = count
         } else {
             viewCountLabel.isHidden = true
+            viewCountLabel.accessibilityLabel = nil
         }
         
         // Tags
@@ -208,10 +274,15 @@ class ProductListCell: UICollectionViewCell {
         for tag in product.tags {
             let label = UILabel()
             label.text = " \(tag) "
-            label.font = .systemFont(ofSize: 10)
-            label.textColor = .systemGray
-            label.backgroundColor = .systemGray6
-            label.layer.cornerRadius = 4
+            label.font = .systemFont(ofSize: 10, weight: .bold)
+            if tag == "도착보장" || tag == "N Pay" {
+                label.textColor = .white
+                label.backgroundColor = UIColor(red: 3/255, green: 199/255, blue: 90/255, alpha: 1)
+            } else {
+                label.textColor = .systemGray
+                label.backgroundColor = .systemGray6
+            }
+            label.layer.cornerRadius = 2
             label.clipsToBounds = true
             tagStackView.addArrangedSubview(label)
         }

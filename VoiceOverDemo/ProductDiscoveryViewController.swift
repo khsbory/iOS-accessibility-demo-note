@@ -8,6 +8,9 @@ struct Product {
     let discountRate: String?
     let tags: [String]
     let viewingCount: String?
+    let storeName: String
+    let rating: Double
+    let reviewCount: Int
     var isLiked: Bool
 }
 
@@ -53,6 +56,19 @@ class ProductDiscoveryViewController: UIViewController {
             "크리넥스 3겹 데코앤소프트 30m 30롤"
         ]
         
+        let sampleStores = [
+            "삼성공식판매처",
+            "로보락코리아",
+            "LG전자직영점",
+            "나이키코리아",
+            "애플스토어",
+            "다이슨코리아",
+            "소니코리아",
+            "스타벅스코리아",
+            "농심몰",
+            "유한킴벌리"
+        ]
+        
         for i in 0..<10 {
             let original = (i + 1) * 50000
             let discount = Int.random(in: 10...40)
@@ -64,8 +80,11 @@ class ProductDiscoveryViewController: UIViewController {
                 price: formatCurrency(finalPrice),
                 originalPrice: formatCurrency(original),
                 discountRate: "\(discount)%",
-                tags: i % 2 == 0 ? ["무료배송", "특가"] : ["스마일배송", "쿠폰"],
+                tags: i % 2 == 0 ? ["도착보장", "N Pay"] : ["무료배송", "쿠폰"],
                 viewingCount: "\(Int.random(in: 100...9999))명 구경 함",
+                storeName: sampleStores[i],
+                rating: Double.random(in: 4.0...5.0).rounded(toPlaces: 1),
+                reviewCount: Int.random(in: 50...5000),
                 isLiked: false
             ))
         }
@@ -104,6 +123,13 @@ class ProductDiscoveryViewController: UIViewController {
         // Show Toast
         let message = isLiked ? "관심상품에 추가되었습니다." : "관심상품에서 삭제되었습니다."
         ToastView.show(message: message, in: self)
+    }
+}
+
+extension Double {
+    func rounded(toPlaces places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
     }
 }
 
